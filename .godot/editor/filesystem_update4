@@ -1,6 +1,5 @@
-res://main.tscn
-res://caja.gd
-res://caja.tscn
 res://barco.tscn
-res://barco.gd
+res://main.tscn
+res://caja.tscn
+res://caja.gd
 res://main.gd
