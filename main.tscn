@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://t73h5m77xd8s"]
+
+[ext_resource type="PackedScene" uid="uid://df5udy5v4x5i7" path="res://fondo.tscn" id="1_ijuxq"]
+[ext_resource type="Script" path="res://main.gd" id="1_k82ms"]
+[ext_resource type="PackedScene" uid="uid://cajn2jx851eg1" path="res://caja.tscn" id="2_w4d3y"]
+[ext_resource type="PackedScene" uid="uid://cyejm2shu20kj" path="res://barco.tscn" id="3_e6qwp"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_k82ms")
+barco = ExtResource("3_e6qwp")
+caja = ExtResource("2_w4d3y")
+
+[node name="fondo" parent="." instance=ExtResource("1_ijuxq")]
+
+[node name="timer_barco" type="Timer" parent="."]
+wait_time = 0.154
+autostart = true

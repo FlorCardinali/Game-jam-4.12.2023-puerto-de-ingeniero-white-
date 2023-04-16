@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6wvrvpsdwi0s"]
+
+[sub_resource type="SystemFont" id="SystemFont_wd6m7"]
+
+[sub_resource type="Theme" id="Theme_sji6y"]
+default_font = SubResource("SystemFont_wd6m7")
+default_font_size = 20
+Button/colors/font_color = Color(0.87451, 0.270588, 0.207843, 1)
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0.32549, 1)
+Button/colors/font_hover_color = Color(0.14902, 0.94902, 0.94902, 1)
+Button/colors/font_hover_pressed_color = Color(0.129412, 0.129412, 1, 1)
+Button/colors/icon_focus_color = Color(1, 0.427451, 1, 1)
+Button/fonts/font = SubResource("SystemFont_wd6m7")
+
+[node name="menu" type="Node2D"]
+
+[node name="hover" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.0156863, 0.192157, 0.2, 0.368627)
+
+[node name="Reanudar-pausa" type="TextureButton" parent="."]
+process_mode = 3
+process_priority = 1
+offset_left = 712.0
+offset_top = 408.0
+offset_right = 1174.0
+offset_bottom = 533.0
+theme = SubResource("Theme_sji6y")
+
+[node name="Opciones-pausa" type="TextureButton" parent="."]
+offset_left = 768.0
+offset_top = 605.0
+offset_right = 1078.0
+offset_bottom = 689.0
+
+[node name="Creditos-pausa" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Salir-pausa" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

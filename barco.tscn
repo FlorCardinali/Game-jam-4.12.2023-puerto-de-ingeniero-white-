@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyejm2shu20kj"]
+
+[ext_resource type="Texture2D" uid="uid://bgcm5k0mhma4d" path="res://img/Cabina barco.png" id="1_oywvl"]
+[ext_resource type="Texture2D" uid="uid://dr8yy0p3xbk1h" path="res://img/Coraza.png" id="2_qcuuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vawqe"]
+size = Vector2(101, 253)
+
+[node name="barco" type="CharacterBody2D" groups=["barcos"]]
+z_as_relative = false
+position = Vector2(3, 3)
+collision_priority = 5.0
+
+[node name="cabina" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(190, 146)
+scale = Vector2(3, 3)
+texture = ExtResource("1_oywvl")
+centered = false
+offset = Vector2(-50.3333, -49)
+
+[node name="coraza" type="Sprite2D" parent="."]
+z_index = 1
+z_as_relative = false
+position = Vector2(191, 142)
+scale = Vector2(3, 3)
+texture = ExtResource("2_qcuuy")
+centered = false
+offset = Vector2(-98.3333, -64.6667)
+
+[node name="colision_vertical_barco" type="CollisionShape2D" parent="."]
+z_index = 2
+z_as_relative = false
+position = Vector2(127.5, 127.5)
+shape = SubResource("RectangleShape2D_vawqe")
