@@ -1,12 +1,12 @@
 2a60927148abd1d33b818b535e306557
-::res://::1681680564
+::res://::1681689249
 barco.gd::GDScript::-1::1681679447::0::1::::<>CharacterBody2D<>::
-barco.tscn::PackedScene::6466200454459773881::1681680210::0::1::::<><>::uid://bgcm5k0mhma4d<>uid://dr8yy0p3xbk1h
-caja.gd::GDScript::-1::1681679516::0::1::::<>CharacterBody2D<>::
-caja.tscn::PackedScene::4792258814295275014::1681680210::0::1::::<><>::res://caja.gd<>uid://iq3qdh6o7tx1
+barco.tscn::PackedScene::6466200454459773881::1681687770::0::1::::<><>::uid://bgcm5k0mhma4d<>uid://dr8yy0p3xbk1h
+caja.gd::GDScript::-1::1681686950::0::1::::<>CharacterBody2D<>::
+caja.tscn::PackedScene::4792258814295275014::1681687682::0::1::::<><>::res://caja.gd<>uid://iq3qdh6o7tx1
 fondo.tscn::PackedScene::7573358607026674896::1681670681::0::1::::<><>::uid://buu0x3r5q4mbs
-main.gd::GDScript::-1::1681680208::0::1::::<>Node<>::
-main.tscn::PackedScene::1401362289343085624::1681680273::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj
+main.gd::GDScript::-1::1681687767::0::1::::<>Node<>::
+main.tscn::PackedScene::1401362289343085624::1681687682::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj
 menu.tscn::PackedScene::6995418373084140772::1681591084::0::1::::<><>::
 ::res://img/::1681591670
 Atras camion.png::CompressedTexture2D::8329645833521016187::1681591648::1681591670::1::::<><>::
