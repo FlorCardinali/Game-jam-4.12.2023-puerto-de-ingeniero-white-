@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://t73h5m77xd8s"]
+[gd_scene load_steps=8 format=3 uid="uid://t73h5m77xd8s"]
 
 [ext_resource type="PackedScene" uid="uid://df5udy5v4x5i7" path="res://fondo.tscn" id="1_ijuxq"]
 [ext_resource type="Script" path="res://main.gd" id="1_k82ms"]
 [ext_resource type="PackedScene" uid="uid://cajn2jx851eg1" path="res://caja.tscn" id="2_w4d3y"]
 [ext_resource type="PackedScene" uid="uid://cyejm2shu20kj" path="res://barco.tscn" id="3_e6qwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcqri"]
+size = Vector2(254, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fsx5"]
+size = Vector2(259, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okpje"]
+size = Vector2(260, 107)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_k82ms")
@@ -11,7 +20,32 @@ barco = ExtResource("3_e6qwp")
 caja = ExtResource("2_w4d3y")
 
 [node name="fondo" parent="." instance=ExtResource("1_ijuxq")]
+metadata/_edit_lock_ = true
 
 [node name="timer_barco" type="Timer" parent="."]
-wait_time = 0.154
+wait_time = 0.1
 autostart = true
+
+[node name="area_1" type="Area2D" parent="."]
+position = Vector2(907.032, 572.24)
+metadata/_edit_lock_ = true
+
+[node name="colision_area_1" type="CollisionShape2D" parent="area_1"]
+position = Vector2(123.968, 51.2598)
+shape = SubResource("RectangleShape2D_vcqri")
+
+[node name="area_2" type="Area2D" parent="."]
+position = Vector2(1220, 572)
+metadata/_edit_lock_ = true
+
+[node name="colision_area_2" type="CollisionShape2D" parent="area_2"]
+position = Vector2(128.5, 51.4999)
+shape = SubResource("RectangleShape2D_2fsx5")
+
+[node name="area_3" type="Area2D" parent="."]
+position = Vector2(1541.32, 567.521)
+metadata/_edit_lock_ = true
+
+[node name="colision_area_3" type="CollisionShape2D" parent="area_3"]
+position = Vector2(126.684, 55.9791)
+shape = SubResource("RectangleShape2D_okpje")

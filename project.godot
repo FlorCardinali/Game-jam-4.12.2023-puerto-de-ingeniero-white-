@@ -31,6 +31,12 @@ click_izquierdo={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="barco"
+2d_physics/layer_2="caja"
+2d_physics/layer_3="detecta_caja_agarrada"
+
 [rendering]
 
 renderer/rendering_method="mobile"

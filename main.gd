@@ -27,12 +27,11 @@ func _process(delta):
 		hay_barco = true
 	elif hay_barco and $timer_barco.timeout:
 		recorrer_mapa(barco_instancia, caja_instancia)
-	
-	
+
 
 func recorrer_mapa(barco, caja):
 	colision_barco = barco.move_and_collide(vector_barco)
-	print(barco.position)
+#	print(barco.position)
 	if barco.position.x >= 2500:
 		barco.queue_free()
 		hay_barco= false

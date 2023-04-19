@@ -7,7 +7,11 @@ var colision
 	
 func _physics_process(delta):
 	if esta_adentro:
-		colision = move_and_collide((get_global_mouse_position() - distancia_al_click - position)*delta)
+		print("mask: ", get_collision_mask())
+		#la caja empiesa en 1 y lo seteas a 2 cuando agarras la caja
+		collision_layer = 2
+		print("layer: ", get_collision_layer())
+		colision = move_and_collide(get_global_mouse_position() - distancia_al_click - position)
 
 func empujar(velocidad):
 	move_and_collide(velocidad)

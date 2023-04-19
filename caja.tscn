@@ -12,7 +12,7 @@ size = Vector2(232, 105)
 [node name="caja" type="CharacterBody2D" groups=["cajas"]]
 z_index = 2
 z_as_relative = false
-collision_mask = 2
+collision_mask = 4
 input_pickable = true
 script = ExtResource("1_u3uut")
 metadata/_edit_group_ = true
@@ -36,5 +36,4 @@ offset = Vector2(-2, -7.33333)
 position = Vector2(110, 46.5)
 shape = SubResource("RectangleShape2D_8ny4e")
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="input_event" from="area_click" to="." method="_on_area_click_input_event"]
