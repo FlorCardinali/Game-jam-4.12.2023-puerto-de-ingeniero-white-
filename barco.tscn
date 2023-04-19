@@ -12,6 +12,7 @@ size = Vector2(362.5, 91)
 [node name="barco" type="CharacterBody2D" groups=["barcos"]]
 z_as_relative = false
 position = Vector2(3, 3)
+collision_layer = 3
 collision_priority = 5.0
 
 [node name="cabina" type="Sprite2D" parent="."]

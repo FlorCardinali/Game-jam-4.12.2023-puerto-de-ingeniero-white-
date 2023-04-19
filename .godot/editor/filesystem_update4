@@ -1,4 +1,4 @@
+res://barco.tscn
 res://main.tscn
 res://caja.tscn
-res://barco.tscn
-res://main.gd
+res://caja.gd

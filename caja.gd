@@ -4,11 +4,10 @@ extends CharacterBody2D
 var esta_adentro = false
 var distancia_al_click = Vector2.ZERO
 var colision
-var colisionador
 	
 func _physics_process(delta):
 	if esta_adentro:
-		colision = move_and_collide(get_global_mouse_position() - distancia_al_click - position)
+		colision = move_and_collide((get_global_mouse_position() - distancia_al_click - position)*delta)
 
 func empujar(velocidad):
 	move_and_collide(velocidad)
