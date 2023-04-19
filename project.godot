@@ -36,6 +36,7 @@ click_izquierdo={
 2d_physics/layer_1="barco"
 2d_physics/layer_2="caja"
 2d_physics/layer_3="detecta_caja_agarrada"
+2d_physics/layer_4="caja_suelta"
 
 [rendering]
 

@@ -14,25 +14,29 @@ var vector_caja = Vector2(11,0)
 var colision_barco
  #caja
 var caja_instancia
+var hay_caja_en_1 = false
+var hay_caja_en_2 = false
+var hay_caja_en_3 = false
 #camion
 var camion_instancia
 var hay_camion = false
 var colision_camion
 var vector_camion = Vector2(-5,0)
+var area_camion
 
 func _ready():
 	pass
 	
 func _process(delta):
+	
 	if not hay_camion:
 		camion_instancia = camion.instantiate()
 		add_child(camion_instancia)
 		#arranca en 2300
 		camion_instancia.position = Vector2(2300,250)
+		area_camion = camion_instancia.get_node("/root/Main/Camion/area_camion")
 		hay_camion = true
-	else:
-		recorrer_mapa_camion(camion_instancia)
-		
+	
 	if not hay_barco:
 		barco_instancia = barco.instantiate()
 		add_child(barco_instancia)
@@ -48,16 +52,11 @@ func _process(delta):
 
 
 func recorrer_mapa_camion(camion):
-	print("recorrer mapa camion")
-	print(camion.position)
 	colision_camion = camion.move_and_collide(vector_camion)
 	#se va en -500
 	if camion.position.x <= -500:
 		camion.queue_free()
 		hay_camion = false
-
-
-
 
 
 func recorrer_mapa_barco(barco, caja):
@@ -72,5 +71,15 @@ func recorrer_mapa_barco(barco, caja):
 			caja.empujar(vector_caja)
 		elif caja.position.x >= 1930:
 			caja.position = Vector2(2500,2500)
-	
 
+
+
+
+
+func _on_area_1_area_entered(area):
+	hay_caja_en_1=true
+	print("entro en 1")
+
+func _on_area_1_area_exited(area):
+	hay_caja_en_1= false
+	print("salio de 1")

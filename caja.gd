@@ -4,14 +4,12 @@ var click_esta_adentro = false
 var distancia_al_click = Vector2.ZERO
 var colision
 var se_solto_caja = false
-
+signal se_solto_la_caja
 
 func _physics_process(delta):
 	if click_esta_adentro:
-#		print("mask: ", get_collision_mask())
 		#la caja empiesa en 1 y lo seteas a 2 cuando agarras la caja
 		collision_layer = 2
-#		print("layer: ", get_collision_layer())
 		colision = move_and_collide(get_global_mouse_position() - distancia_al_click - position)
 
 func empujar(velocidad):
@@ -24,7 +22,7 @@ func _on_area_click_input_event(viewport, event, shape_idx):
 		print("se clikio")
 	if event.is_action_released("click_izquierdo"):
 		click_esta_adentro = false
-		se_solto_caja = true
+		emit_signal("se_solto_la_caja")
 		print("se solto el click")
 
  

@@ -1,15 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bexi10yhppw4w"]
+[gd_scene load_steps=6 format=3 uid="uid://bexi10yhppw4w"]
 
+[ext_resource type="Script" path="res://camion.gd" id="1_al8ed"]
 [ext_resource type="Texture2D" uid="uid://ct3ekkk6a7gh3" path="res://img/Delante de camion.png" id="1_ghuuv"]
 [ext_resource type="Texture2D" uid="uid://dqw7bxxlks3jj" path="res://img/Atras camion.png" id="2_frnof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjrn5"]
 size = Vector2(326.25, 69.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2sk0"]
+size = Vector2(314, 69.5)
+
 [node name="Camion" type="CharacterBody2D"]
 z_index = 2
 z_as_relative = false
-metadata/_edit_group_ = true
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_al8ed")
 
 [node name="colision_camion" type="CollisionShape2D" parent="."]
 z_index = 2
@@ -32,3 +38,9 @@ position = Vector2(92, 26)
 scale = Vector2(3, 3)
 texture = ExtResource("2_frnof")
 centered = false
+
+[node name="area_camion" type="Area2D" parent="."]
+
+[node name="colision_camion" type="CollisionShape2D" parent="area_camion"]
+position = Vector2(308, 121.75)
+shape = SubResource("RectangleShape2D_k2sk0")

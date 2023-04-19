@@ -1,7 +1,7 @@
-Sprite2D
 CollisionShape2D
-CharacterBody2D
 Area2D
+Sprite2D
+CharacterBody2D
 Timer
 RigidBody2D
 Node2D
