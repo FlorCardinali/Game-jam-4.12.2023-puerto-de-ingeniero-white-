@@ -1,16 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6wvrvpsdwi0s"]
+[gd_scene load_steps=4 format=3 uid="uid://c6wvrvpsdwi0s"]
 
-[sub_resource type="SystemFont" id="SystemFont_wd6m7"]
-
-[sub_resource type="Theme" id="Theme_sji6y"]
-default_font = SubResource("SystemFont_wd6m7")
-default_font_size = 20
-Button/colors/font_color = Color(0.87451, 0.270588, 0.207843, 1)
-Button/colors/font_focus_color = Color(0.94902, 0.94902, 0.32549, 1)
-Button/colors/font_hover_color = Color(0.14902, 0.94902, 0.94902, 1)
-Button/colors/font_hover_pressed_color = Color(0.129412, 0.129412, 1, 1)
-Button/colors/icon_focus_color = Color(1, 0.427451, 1, 1)
-Button/fonts/font = SubResource("SystemFont_wd6m7")
+[ext_resource type="Texture2D" uid="uid://dol3fu44qxbxh" path="res://img/botones/Reanudar-17.png" id="1_o67pt"]
+[ext_resource type="Texture2D" uid="uid://oqwkl7mep5co" path="res://img/botones/Reanudar-19.png" id="2_1bbeu"]
+[ext_resource type="Texture2D" uid="uid://ox6hnrlp3152" path="res://img/botones/Reanudar-18.png" id="3_7ch2o"]
 
 [node name="menu" type="Node2D"]
 
@@ -22,11 +14,15 @@ color = Color(0.0156863, 0.192157, 0.2, 0.368627)
 [node name="Reanudar-pausa" type="TextureButton" parent="."]
 process_mode = 3
 process_priority = 1
-offset_left = 712.0
-offset_top = 408.0
-offset_right = 1174.0
-offset_bottom = 533.0
-theme = SubResource("Theme_sji6y")
+z_index = 5
+z_as_relative = false
+offset_left = 237.0
+offset_top = 162.0
+offset_right = 1095.0
+offset_bottom = 548.0
+texture_normal = ExtResource("1_o67pt")
+texture_pressed = ExtResource("2_1bbeu")
+texture_hover = ExtResource("3_7ch2o")
 
 [node name="Opciones-pausa" type="TextureButton" parent="."]
 offset_left = 768.0
