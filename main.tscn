@@ -24,11 +24,7 @@ camion = ExtResource("4_ji80p")
 [node name="fondo" parent="." instance=ExtResource("1_ijuxq")]
 metadata/_edit_lock_ = true
 
-[node name="timer_barco" type="Timer" parent="."]
-wait_time = 0.1
-autostart = true
-
-[node name="area_1" type="Area2D" parent="."]
+[node name="area_1" type="Area2D" parent="." groups=["area_dejable"]]
 position = Vector2(907.032, 572.24)
 metadata/_edit_lock_ = true
 
@@ -36,7 +32,7 @@ metadata/_edit_lock_ = true
 position = Vector2(123.968, 51.2598)
 shape = SubResource("RectangleShape2D_vcqri")
 
-[node name="area_2" type="Area2D" parent="."]
+[node name="area_2" type="Area2D" parent="." groups=["area_dejable"]]
 position = Vector2(1220, 572)
 metadata/_edit_lock_ = true
 
@@ -44,13 +40,15 @@ metadata/_edit_lock_ = true
 position = Vector2(128.5, 51.4999)
 shape = SubResource("RectangleShape2D_2fsx5")
 
-[node name="area_3" type="Area2D" parent="."]
+[node name="area_3" type="Area2D" parent="." groups=["area_dejable"]]
 position = Vector2(1541.32, 567.521)
 metadata/_edit_lock_ = true
 
 [node name="colision_area_3" type="CollisionShape2D" parent="area_3"]
 position = Vector2(126.684, 55.9791)
 shape = SubResource("RectangleShape2D_okpje")
+
+[node name="Timer_general" type="Timer" parent="."]
 
 [connection signal="area_entered" from="area_1" to="." method="_on_area_1_area_entered"]
 [connection signal="area_exited" from="area_1" to="." method="_on_area_1_area_exited"]

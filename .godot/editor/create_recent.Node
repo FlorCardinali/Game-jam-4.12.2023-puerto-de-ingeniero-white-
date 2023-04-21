@@ -1,8 +1,8 @@
+Timer
 CollisionShape2D
 Area2D
 Sprite2D
 CharacterBody2D
-Timer
 RigidBody2D
 Node2D
 AnimatableBody2D
