@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://iq3qdh6o7tx1" path="res://img/Carga.png" id="2_1n45x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ay1d"]
-size = Vector2(214, 93)
+size = Vector2(243, 123)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ny4e"]
-size = Vector2(232, 105)
+size = Vector2(270, 140)
 
 [node name="caja" type="CharacterBody2D" groups=["cajas"]]
 z_index = 2
@@ -20,7 +20,7 @@ metadata/_edit_group_ = true
 [node name="colision_caja" type="CollisionShape2D" parent="."]
 z_index = 2
 z_as_relative = false
-position = Vector2(113, 47.5)
+position = Vector2(113.5, 48.5)
 shape = SubResource("RectangleShape2D_8ay1d")
 
 [node name="sprite_caja" type="Sprite2D" parent="."]
@@ -33,7 +33,7 @@ offset = Vector2(-2, -7.33333)
 [node name="area_click" type="Area2D" parent="."]
 
 [node name="detectar_colision" type="CollisionShape2D" parent="area_click"]
-position = Vector2(110, 46.5)
+position = Vector2(115, 49)
 shape = SubResource("RectangleShape2D_8ny4e")
 
 [connection signal="input_event" from="area_click" to="." method="_on_area_click_input_event"]
