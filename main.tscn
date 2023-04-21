@@ -25,30 +25,42 @@ camion = ExtResource("4_ji80p")
 metadata/_edit_lock_ = true
 
 [node name="area_1" type="Area2D" parent="." groups=["area_dejable"]]
-position = Vector2(907.032, 572.24)
-metadata/_edit_lock_ = true
+z_index = 2
+z_as_relative = false
+position = Vector2(918, 578)
+collision_layer = 2
+collision_mask = 2
 
 [node name="colision_area_1" type="CollisionShape2D" parent="area_1"]
-position = Vector2(123.968, 51.2598)
+z_index = 2
+z_as_relative = false
+position = Vector2(112, 45.9999)
 shape = SubResource("RectangleShape2D_vcqri")
 
 [node name="area_2" type="Area2D" parent="." groups=["area_dejable"]]
-position = Vector2(1220, 572)
-metadata/_edit_lock_ = true
+z_index = 2
+z_as_relative = false
+position = Vector2(1230, 576)
+collision_layer = 2
+collision_mask = 2
 
 [node name="colision_area_2" type="CollisionShape2D" parent="area_2"]
-position = Vector2(128.5, 51.4999)
+z_index = 2
+z_as_relative = false
+position = Vector2(121, 49)
 shape = SubResource("RectangleShape2D_2fsx5")
 
 [node name="area_3" type="Area2D" parent="." groups=["area_dejable"]]
-position = Vector2(1541.32, 567.521)
-metadata/_edit_lock_ = true
+z_index = 2
+z_as_relative = false
+position = Vector2(1548, 577)
+collision_layer = 2
+collision_mask = 2
 
 [node name="colision_area_3" type="CollisionShape2D" parent="area_3"]
-position = Vector2(126.684, 55.9791)
+z_index = 2
+z_as_relative = false
+position = Vector2(121, 47)
 shape = SubResource("RectangleShape2D_okpje")
 
 [node name="Timer_general" type="Timer" parent="."]
-
-[connection signal="area_entered" from="area_1" to="." method="_on_area_1_area_entered"]
-[connection signal="area_exited" from="area_1" to="." method="_on_area_1_area_exited"]
