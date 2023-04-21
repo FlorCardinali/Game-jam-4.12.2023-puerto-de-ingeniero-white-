@@ -16,16 +16,17 @@ var vector_caja = Vector2(11,0)
 var colision_barco
  #caja
 var caja_instancia
-var cant_cajas = 0
 #camion
 var camion_instancia #donde se guarda la copia del camion
 var hay_camion = false #lo que controla que haya un solo camion
 var colision_camion #donde se guarda el movimiento del camion
-var vector_camion = Vector2(-7,0) #velocidad a la que va el camion
+var vector_camion = Vector2(-5,0) #velocidad a la que va el camion
 var area_camioncito
+
 
 func _ready():
 	pass
+	
 
 func cuando_se_suelta_la_caja(cajita):
 	if  $area_1.get_overlapping_bodies().size() > 0:
@@ -50,13 +51,14 @@ func cuando_se_suelta_la_caja(cajita):
 	
 	if (cajita.position != $area_1.position) and (cajita.position != $area_2.position) and (cajita.position != $area_3.position and (cajita.position != area_camioncito.global_position)):
 		print("cajita no esta donde debe estar")
+		$explocion.stop()
+		$explocion.global_position = cajita.global_position
+		$explocion.visible = true
+		$explocion.play()
 		cajita.queue_free()
 	
 
 func _process(delta):
-#	if  get_tree().get_nodes_in_group("cajas").size() > 0:
-#		cant_cajas = get_tree().get_nodes_in_group("cajas").size()
-		
 	
 	if not hay_camion:
 		camion_instancia = camion.instantiate()
@@ -73,11 +75,9 @@ func _process(delta):
 		barco_instancia.position = Vector2(-800,750)
 		
 		caja_instancia = caja.instantiate()
-		cant_cajas += 1
 		add_child(caja_instancia)
 		caja_instancia.position = Vector2(-450,780)
 		caja_instancia.connect("se_solto_la_caja", cuando_se_suelta_la_caja)
-		
 		
 		hay_barco = true
 
@@ -88,15 +88,12 @@ func _process(delta):
 func recorrer_mapa_camion(par_camion):
 	colision_camion = par_camion.move_and_collide(vector_camion)
 	area_camioncito = par_camion.get_node("area_camion")
-#	print(area_camioncito.global_position)
-	if area_camioncito.get_overlapping_bodies().size() > 0:
-		if area_camioncito.get_overlapping_bodies()[0].name == "caja" or area_camioncito.get_overlapping_bodies()[0].name == ("@caja@"+ str(cant_cajas)):
-			area_camioncito.get_overlapping_bodies()[0].position = area_camioncito.global_position
-		print(area_camioncito.get_overlapping_bodies())
+	if area_camioncito.get_overlapping_bodies().size() == 1:
+#		if area_camioncito.get_overlapping_bodies()[0].name == "caja" or area_camioncito.get_overlapping_bodies()[0].name == ("@caja@"+ str(cant_cajas)):
+		area_camioncito.get_overlapping_bodies()[0].position = area_camioncito.global_position
 	elif area_camioncito.get_overlapping_bodies().size() > 1:
 		#problema, si hay mas de un objeto en el arreglo
 		print("hay ams de unaaaaaaaaa")
-		print(area_camioncito.get_overlapping_bodies())
 	
 	if par_camion.position.x <= -400:
 		if area_camioncito.get_overlapping_bodies().size() > 0:
@@ -119,3 +116,8 @@ func recorrer_mapa_barco(barco, caja):
 			caja.empujar(vector_caja)
 		elif caja.position.x >= 1930:
 			caja.queue_free()
+
+
+func _on_explocion_animation_finished():
+	$explocion.stop()
+	$explocion.visible = false

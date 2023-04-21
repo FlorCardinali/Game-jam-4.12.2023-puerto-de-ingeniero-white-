@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://t73h5m77xd8s"]
+[gd_scene load_steps=15 format=3 uid="uid://t73h5m77xd8s"]
 
 [ext_resource type="PackedScene" uid="uid://df5udy5v4x5i7" path="res://fondo.tscn" id="1_ijuxq"]
 [ext_resource type="Script" path="res://main.gd" id="1_k82ms"]
 [ext_resource type="PackedScene" uid="uid://cajn2jx851eg1" path="res://caja.tscn" id="2_w4d3y"]
 [ext_resource type="PackedScene" uid="uid://cyejm2shu20kj" path="res://barco.tscn" id="3_e6qwp"]
 [ext_resource type="PackedScene" uid="uid://bexi10yhppw4w" path="res://camion.tscn" id="4_ji80p"]
+[ext_resource type="Texture2D" uid="uid://bmh1v6r55c1v7" path="res://img/explosion/Boom1.png" id="6_4i52o"]
+[ext_resource type="Texture2D" uid="uid://cp72xnkqayo1b" path="res://img/explosion/Boom2.png" id="7_y6awf"]
+[ext_resource type="Texture2D" uid="uid://ba28i8lcufxgv" path="res://img/explosion/Boom3.png" id="8_xp7t1"]
+[ext_resource type="Texture2D" uid="uid://b83gjmb8okki3" path="res://img/explosion/Boom4.png" id="9_wjmj1"]
+[ext_resource type="Texture2D" uid="uid://dqryf8nvqb586" path="res://img/explosion/Boom5.png" id="10_rmdpu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcqri"]
 size = Vector2(254, 107)
@@ -14,6 +19,29 @@ size = Vector2(259, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_okpje"]
 size = Vector2(260, 107)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xtu3i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4i52o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y6awf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xp7t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wjmj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rmdpu")
+}],
+"loop": false,
+"name": &"boom",
+"speed": 6.0
+}]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_k82ms")
@@ -64,3 +92,17 @@ position = Vector2(121, 47)
 shape = SubResource("RectangleShape2D_okpje")
 
 [node name="Timer_general" type="Timer" parent="."]
+
+[node name="explocion" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 4
+z_as_relative = false
+position = Vector2(542, 529)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_xtu3i")
+animation = &"boom"
+frame = 4
+frame_progress = 1.0
+centered = false
+
+[connection signal="animation_finished" from="explocion" to="." method="_on_explocion_animation_finished"]
