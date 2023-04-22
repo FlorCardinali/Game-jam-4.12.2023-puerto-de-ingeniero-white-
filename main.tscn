@@ -1,24 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://t73h5m77xd8s"]
+[gd_scene load_steps=18 format=3 uid="uid://t73h5m77xd8s"]
 
 [ext_resource type="PackedScene" uid="uid://df5udy5v4x5i7" path="res://fondo.tscn" id="1_ijuxq"]
 [ext_resource type="Script" path="res://main.gd" id="1_k82ms"]
 [ext_resource type="PackedScene" uid="uid://cajn2jx851eg1" path="res://caja.tscn" id="2_w4d3y"]
 [ext_resource type="PackedScene" uid="uid://cyejm2shu20kj" path="res://barco.tscn" id="3_e6qwp"]
 [ext_resource type="PackedScene" uid="uid://bexi10yhppw4w" path="res://camion.tscn" id="4_ji80p"]
+[ext_resource type="Script" path="res://control_camiones.gd" id="5_kjx4e"]
 [ext_resource type="Texture2D" uid="uid://bmh1v6r55c1v7" path="res://img/explosion/Boom1.png" id="6_4i52o"]
+[ext_resource type="Script" path="res://control_barco.gd" id="6_y878k"]
+[ext_resource type="Script" path="res://control_cajas.gd" id="7_isrxx"]
 [ext_resource type="Texture2D" uid="uid://cp72xnkqayo1b" path="res://img/explosion/Boom2.png" id="7_y6awf"]
 [ext_resource type="Texture2D" uid="uid://ba28i8lcufxgv" path="res://img/explosion/Boom3.png" id="8_xp7t1"]
 [ext_resource type="Texture2D" uid="uid://b83gjmb8okki3" path="res://img/explosion/Boom4.png" id="9_wjmj1"]
 [ext_resource type="Texture2D" uid="uid://dqryf8nvqb586" path="res://img/explosion/Boom5.png" id="10_rmdpu"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcqri"]
-size = Vector2(254, 107)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fsx5"]
-size = Vector2(259, 107)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_okpje"]
-size = Vector2(260, 107)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xtu3i"]
 animations = [{
@@ -43,11 +37,50 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcqri"]
+size = Vector2(254, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fsx5"]
+size = Vector2(259, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okpje"]
+size = Vector2(260, 107)
+
 [node name="Main" type="Node"]
 script = ExtResource("1_k82ms")
 barco = ExtResource("3_e6qwp")
 caja = ExtResource("2_w4d3y")
 camion = ExtResource("4_ji80p")
+
+[node name="control_camiones" type="Node" parent="."]
+script = ExtResource("5_kjx4e")
+camion = ExtResource("4_ji80p")
+
+[node name="timer_camion" type="Timer" parent="control_camiones"]
+autostart = true
+
+[node name="control_barco" type="Node" parent="."]
+script = ExtResource("6_y878k")
+barco = ExtResource("3_e6qwp")
+
+[node name="timer_barco" type="Timer" parent="control_barco"]
+autostart = true
+
+[node name="control_cajas" type="Node" parent="."]
+script = ExtResource("7_isrxx")
+caja = ExtResource("2_w4d3y")
+
+[node name="explocion" type="AnimatedSprite2D" parent="control_cajas"]
+visible = false
+z_index = 4
+z_as_relative = false
+position = Vector2(542, 529)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_xtu3i")
+animation = &"boom"
+frame = 4
+frame_progress = 1.0
+centered = false
 
 [node name="fondo" parent="." instance=ExtResource("1_ijuxq")]
 metadata/_edit_lock_ = true
@@ -91,24 +124,13 @@ z_as_relative = false
 position = Vector2(121, 47)
 shape = SubResource("RectangleShape2D_okpje")
 
-[node name="Timer_general" type="Timer" parent="."]
-
-[node name="explocion" type="AnimatedSprite2D" parent="."]
-visible = false
-z_index = 4
-z_as_relative = false
-position = Vector2(542, 529)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_xtu3i")
-animation = &"boom"
-frame = 4
-frame_progress = 1.0
-centered = false
-
 [node name="Ganaste" type="ColorRect" parent="."]
 visible = false
 offset_right = 1917.0
 offset_bottom = 1079.0
 color = Color(0.0117647, 0.0431373, 0.0666667, 0.654902)
 
-[connection signal="animation_finished" from="explocion" to="." method="_on_explocion_animation_finished"]
+[connection signal="area_del_camion" from="control_camiones" to="control_cajas" method="_on_control_camiones_area_del_camion"]
+[connection signal="aparece_barco" from="control_barco" to="control_cajas" method="_on_control_barco_aparece_barco"]
+[connection signal="caja_creada" from="control_cajas" to="control_barco" method="_on_control_cajas_caja_creada"]
+[connection signal="animation_finished" from="control_cajas/explocion" to="control_cajas" method="_on_explocion_animation_finished"]

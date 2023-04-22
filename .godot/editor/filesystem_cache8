@@ -1,13 +1,18 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682134954
+::res://::1682141472
 barco.tscn::PackedScene::6466200454459773881::1682103059::0::1::::<><>::uid://bgcm5k0mhma4d<>uid://dr8yy0p3xbk1h
 caja.gd::GDScript::-1::1682058767::0::1::::<>CharacterBody2D<>::
 caja.tscn::PackedScene::4792258814295275014::1682103059::0::1::::<><>::res://caja.gd<>uid://iq3qdh6o7tx1
 camion.gd::GDScript::-1::1681933581::0::1::::<>CharacterBody2D<>::
 camion.tscn::PackedScene::2715190263670033040::1682103059::0::1::::<><>::res://camion.gd<>uid://ct3ekkk6a7gh3<>uid://dqw7bxxlks3jj
+control_barco.gd::GDScript::-1::1682141451::0::1::::<>Node<>::
+control_cajas.gd::GDScript::-1::1682141451::0::1::::<>Node<>::
+control_camiones.gd::GDScript::-1::1682140733::0::1::::<>Node<>::
 fondo.tscn::PackedScene::7573358607026674896::1681670681::0::1::::<><>::uid://buu0x3r5q4mbs
-main.gd::GDScript::-1::1682111202::0::1::::<>Node<>::
-main.tscn::PackedScene::1401362289343085624::1682134711::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj<>uid://bexi10yhppw4w<>uid://bmh1v6r55c1v7<>uid://cp72xnkqayo1b<>uid://ba28i8lcufxgv<>uid://b83gjmb8okki3<>uid://dqryf8nvqb586
+Inicio.gd::GDScript::-1::1682138387::0::1::::<>Node2D<>::
+main.gd::GDScript::-1::1682141451::0::1::::<>Node<>::
+main.tscn::PackedScene::1401362289343085624::1682141451::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj<>uid://bexi10yhppw4w<>res://control_camiones.gd<>uid://bmh1v6r55c1v7<>res://control_barco.gd<>res://control_cajas.gd<>uid://cp72xnkqayo1b<>uid://ba28i8lcufxgv<>uid://b83gjmb8okki3<>uid://dqryf8nvqb586
+menu_inicio.tscn::PackedScene::5315546637803376064::1682140827::0::1::::<><>::res://Inicio.gd<>uid://t73h5m77xd8s<>uid://0necnmkdeb67
 ::res://img/::1682135253
 Atras camion.png::CompressedTexture2D::8329645833521016187::1681591648::1681591670::1::::<><>::
 Barco.png::CompressedTexture2D::112137635845269500::1681585949::1681585958::1::::<><>::
@@ -35,5 +40,5 @@ Boom2.png::CompressedTexture2D::5893415241130631021::1682105645::1682105779::1::
 Boom3.png::CompressedTexture2D::2444178580546471717::1682105645::1682105779::1::::<><>::
 Boom4.png::CompressedTexture2D::4760836108307075044::1682105645::1682105779::1::::<><>::
 Boom5.png::CompressedTexture2D::8318845862231369697::1682105645::1682105779::1::::<><>::
-::res://img/menu/::1682135257
+::res://img/menu/::1682135260
 Portada_Referencia.png::CompressedTexture2D::1781805143112189906::1682135257::1682135260::1::::<><>::
