@@ -1,10 +1,7 @@
-res://main.tscn
-res://control_barco.gd
-res://control_cajas.gd
-res://main.gd
+res://Inicio.gd
 res://menu_inicio.tscn
+res://main.tscn
 res://barco.tscn
-res://control_camiones.gd
 res://caja.tscn
 res://camion.tscn
-res://Inicio.gd
+res://main.gd

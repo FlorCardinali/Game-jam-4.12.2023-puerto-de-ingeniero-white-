@@ -57,7 +57,6 @@ visible = false
 modulate = Color(0, 0, 0, 0.67451)
 z_index = 5
 z_as_relative = false
-anchors_preset = -1
 offset_right = 1921.0
 offset_bottom = 1081.0
 color = Color(0.0117647, 0.0431373, 0.0666667, 0.858824)

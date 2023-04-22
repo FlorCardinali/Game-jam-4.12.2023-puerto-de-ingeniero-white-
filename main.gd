@@ -9,7 +9,7 @@ func _ready():
 	
 func _process(delta):
 	#condicion de victoria
-	if  puntos >= 1:
+	if  puntos == 2*nivel:
 		nivel+=1
 		$Ganaste.visible = true
 		get_tree().paused = true

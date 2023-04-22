@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chy5jnwc84n0c"]
+[gd_scene load_steps=31 format=3 uid="uid://chy5jnwc84n0c"]
 
 [ext_resource type="Script" path="res://Inicio.gd" id="1_0uyne"]
 [ext_resource type="PackedScene" uid="uid://t73h5m77xd8s" path="res://main.tscn" id="2_8ghba"]
@@ -24,6 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://bmf07tgw21wn1" path="res://img/tutorial/Instrucciones_2.png" id="22_15rce"]
 [ext_resource type="Texture2D" uid="uid://bdatapjco1w4e" path="res://img/tutorial/Instrucciones_3.png" id="23_pjk3b"]
 [ext_resource type="AudioStream" uid="uid://bfidktoqsb8l1" path="res://sounds/Start.wav" id="24_ak1fy"]
+[ext_resource type="AudioStream" uid="uid://bdt6t8koxrpxo" path="res://sounds/Ambienter listo_.wav" id="25_morit"]
+[ext_resource type="AudioStream" uid="uid://mcgorvlia1x" path="res://sounds/ObreroBien.wav" id="26_d5fyn"]
+[ext_resource type="AudioStream" uid="uid://djciu4bo67tfl" path="res://sounds/ObreromAL.wav" id="27_hdrt4"]
+[ext_resource type="AudioStream" uid="uid://k66xgii6t82j" path="res://sounds/Creditos.wav" id="28_hpem5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8naf"]
 animations = [{
@@ -156,12 +160,33 @@ centered = false
 
 [node name="botones" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_ak1fy")
+volume_db = -9.226
 
 [node name="timer_salir" type="Timer" parent="botones"]
 one_shot = true
+
+[node name="musica_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_morit")
+volume_db = -20.129
+
+[node name="obrero" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_d5fyn")
+volume_db = -15.935
+
+[node name="obrero2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_hdrt4")
+volume_db = -15.935
+
+[node name="son_creditos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_hpem5")
+volume_db = -14.258
+
+[node name="Ttimer_sonido_creditos" type="Timer" parent="son_creditos"]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Ayuda" to="." method="_on_ayuda_pressed"]
 [connection signal="timeout" from="botones/timer_salir" to="." method="_on_timer_salir_timeout"]
+[connection signal="finished" from="musica_menu" to="." method="_on_musica_menu_finished"]
+[connection signal="timeout" from="son_creditos/Ttimer_sonido_creditos" to="." method="_on_ttimer_sonido_creditos_timeout"]

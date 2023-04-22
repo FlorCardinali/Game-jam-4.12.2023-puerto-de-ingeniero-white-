@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdt6t8koxrpxo"
+path="res://.godot/imported/Ambienter listo_.wav-2f7f5734a2fa46e8a89f6ef0f629d75a.sample"
+
+[deps]
+
+source_file="res://sounds/Ambienter listo_.wav"
+dest_files=["res://.godot/imported/Ambienter listo_.wav-2f7f5734a2fa46e8a89f6ef0f629d75a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

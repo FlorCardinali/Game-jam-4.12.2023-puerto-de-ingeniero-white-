@@ -1,8 +1,8 @@
+TextureButton
 Timer
 AudioStreamPlayer
 AudioStreamPlayer2D
 AnimatedSprite2D
-TextureButton
 Node
 ColorRect
 Button
