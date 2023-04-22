@@ -1,15 +1,14 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682103059
+::res://::1682134954
 barco.tscn::PackedScene::6466200454459773881::1682103059::0::1::::<><>::uid://bgcm5k0mhma4d<>uid://dr8yy0p3xbk1h
 caja.gd::GDScript::-1::1682058767::0::1::::<>CharacterBody2D<>::
 caja.tscn::PackedScene::4792258814295275014::1682103059::0::1::::<><>::res://caja.gd<>uid://iq3qdh6o7tx1
 camion.gd::GDScript::-1::1681933581::0::1::::<>CharacterBody2D<>::
 camion.tscn::PackedScene::2715190263670033040::1682103059::0::1::::<><>::res://camion.gd<>uid://ct3ekkk6a7gh3<>uid://dqw7bxxlks3jj
 fondo.tscn::PackedScene::7573358607026674896::1681670681::0::1::::<><>::uid://buu0x3r5q4mbs
-main.gd::GDScript::-1::1682065683::0::1::::<>Node<>::
-main.tscn::PackedScene::1401362289343085624::1682103059::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj<>uid://bexi10yhppw4w
-menu.tscn::PackedScene::6995418373084140772::1682103059::0::1::::<><>::
-::res://img/::1682105948
+main.gd::GDScript::-1::1682111202::0::1::::<>Node<>::
+main.tscn::PackedScene::1401362289343085624::1682134711::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj<>uid://bexi10yhppw4w<>uid://bmh1v6r55c1v7<>uid://cp72xnkqayo1b<>uid://ba28i8lcufxgv<>uid://b83gjmb8okki3<>uid://dqryf8nvqb586
+::res://img/::1682135253
 Atras camion.png::CompressedTexture2D::8329645833521016187::1681591648::1681591670::1::::<><>::
 Barco.png::CompressedTexture2D::112137635845269500::1681585949::1681585958::1::::<><>::
 Cabina barco.png::CompressedTexture2D::2812465243168423277::1681591639::1681591670::1::::<><>::
@@ -20,13 +19,21 @@ Coraza.png::CompressedTexture2D::8422098263248738139::1681591660::1681591670::1:
 Delante de camion.png::CompressedTexture2D::6164493241623914626::1681591669::1681591670::1::::<><>::
 Fondo1.png::CompressedTexture2D::3833045607914995404::1681590646::1681590649::1::::<><>::
 fondo_test.png::CompressedTexture2D::7947584695884254510::1681577178::1681577190::1::::<><>::
-::res://img/botones/::1682105988
+::res://img/barco/::1682134706
+Cabina barco.png::CompressedTexture2D::8666572378457222345::1682134630::1682134706::1::::<><>::
+Coraza barco.png::CompressedTexture2D::2274825946254627491::1682134646::1682134706::1::::<><>::
+::res://img/botones/::1682107917
 Reanudar-17.png::CompressedTexture2D::8166324118679645105::1682105954::1682107916::1::::<><>::
 Reanudar-18.png::CompressedTexture2D::1032019936195116143::1682105973::1682107917::1::::<><>::
 Reanudar-19.png::CompressedTexture2D::1017028114519108610::1682105988::1682107916::1::::<><>::
+::res://img/camion/::1682134706
+Camion delante.png::CompressedTexture2D::2502995859403098488::1682134676::1682134706::1::::<><>::
+Camion detras.png::CompressedTexture2D::3288709098982046578::1682134687::1682134706::1::::<><>::
 ::res://img/explosion/::1682105779
 Boom1.png::CompressedTexture2D::3244755251000630722::1682105645::1682105779::1::::<><>::
 Boom2.png::CompressedTexture2D::5893415241130631021::1682105645::1682105779::1::::<><>::
 Boom3.png::CompressedTexture2D::2444178580546471717::1682105645::1682105779::1::::<><>::
 Boom4.png::CompressedTexture2D::4760836108307075044::1682105645::1682105779::1::::<><>::
 Boom5.png::CompressedTexture2D::8318845862231369697::1682105645::1682105779::1::::<><>::
+::res://img/menu/::1682135257
+Portada_Referencia.png::CompressedTexture2D::1781805143112189906::1682135257::1682135260::1::::<><>::

@@ -4,9 +4,12 @@ extends Node
 @export var caja:PackedScene
 @export var camion:PackedScene
 
-var escena_caja = load("res://caja.tscn")
 var nivel = 1
+#derrota
+var fallos = 0
+#victoria
 var puntos = 0
+
 
 #barco
 var barco_instancia
@@ -22,6 +25,7 @@ var hay_camion = false #lo que controla que haya un solo camion
 var colision_camion #donde se guarda el movimiento del camion
 var vector_camion = Vector2(-5,0) #velocidad a la que va el camion
 var area_camioncito
+
 
 
 func _ready():
@@ -57,6 +61,14 @@ func cuando_se_suelta_la_caja(cajita):
 	
 
 func _process(delta):
+	
+	#condicion de victoria
+	if  puntos >= 2*nivel:
+		nivel+=1
+		$Ganaste.visible = true
+#		get_tree().paused
+		
+	
 	
 	#creador de camiones
 	if not hay_camion:
@@ -101,9 +113,12 @@ func recorrer_mapa_camion(par_camion):
 	if par_camion.position.x <= -400:
 		if area_camioncito.get_overlapping_bodies().size() > 0:
 			area_camioncito.get_overlapping_bodies()[0].queue_free() #eliminacion de caja
-		#contado de puntos
+			#contado de puntos
 			puntos += 1
-			print(puntos)
+			print("puntos: ", puntos)
+		else:
+			fallos+=1
+			print("fallos: ", fallos)
 		par_camion.queue_free()
 		hay_camion = false
 

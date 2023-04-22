@@ -1,6 +1,5 @@
 res://main.tscn
-res://barco.tscn
-res://camion.tscn
-res://caja.tscn
 res://menu.tscn
+res://Inicio.gd
+res://menu_inicio.tscn
 res://main.gd
