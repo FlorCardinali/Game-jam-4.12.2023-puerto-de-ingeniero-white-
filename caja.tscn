@@ -10,6 +10,7 @@ size = Vector2(243, 123)
 size = Vector2(270, 140)
 
 [node name="caja" type="CharacterBody2D" groups=["cajas"]]
+process_mode = 1
 z_index = 2
 z_as_relative = false
 collision_mask = 0

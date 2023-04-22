@@ -4,3 +4,7 @@ res://control_cajas.gd
 res://main.gd
 res://menu_inicio.tscn
 res://barco.tscn
+res://control_camiones.gd
+res://caja.tscn
+res://camion.tscn
+res://Inicio.gd

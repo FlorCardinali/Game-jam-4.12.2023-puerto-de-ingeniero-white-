@@ -1,13 +1,13 @@
+AnimatedSprite2D
+TextureButton
 Node
 Timer
 ColorRect
 Button
 Sprite2D
-AnimatedSprite2D
 CollisionShape2D
 Area2D
 CharacterBody2D
 RigidBody2D
 Node2D
 AnimatableBody2D
-TextureButton

@@ -5,7 +5,6 @@ extends Node
 var barco_instancia
 var hay_barco = false
 signal aparece_barco(barco)
-signal mover_caja_con_barco(caja,barco)
 var colision_barco
 var vector_barco = Vector2(10,0)
 var caja_barco
@@ -36,7 +35,6 @@ func recorrer_mapa_barco(par_barco):
 		#eliminacion de la caja por derecha
 		elif caja_barco.global_position.x >= 1930:
 			caja_barco.queue_free()
-
 
 func _on_control_cajas_caja_creada(caja):
 	caja_barco = caja

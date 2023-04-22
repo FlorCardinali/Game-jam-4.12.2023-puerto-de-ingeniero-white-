@@ -7,6 +7,7 @@ var camion_instancia #donde se guarda la copia del camion
 var area_camioncito
 var vector_camion = Vector2(-5,0) #velocidad a la que va el camion
 signal area_del_camion(area)
+signal puntos(punto)
 
 func _process(delta):
 	if not hay_camion:
@@ -35,12 +36,9 @@ func recorrer_mapa_camion(par_camion):
 	if par_camion.position.x <= -400:
 		if area_camioncito.get_overlapping_bodies().size() > 0:
 			area_camioncito.get_overlapping_bodies()[0].queue_free() #eliminacion de caja
-			#contado de puntos
-#			puntos += 1
-#			print("puntos: ", puntos)
-#		else:
-#			fallos+=1
-#			print("fallos: ", fallos)
+			emit_signal("puntos",1)
+		else:
+			emit_signal("puntos",0)
 		par_camion.queue_free()
 		hay_camion = false
 

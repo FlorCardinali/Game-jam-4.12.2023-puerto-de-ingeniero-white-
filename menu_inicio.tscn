@@ -1,25 +1,159 @@
-[gd_scene load_steps=4 format=3 uid="uid://chy5jnwc84n0c"]
+[gd_scene load_steps=26 format=3 uid="uid://chy5jnwc84n0c"]
 
 [ext_resource type="Script" path="res://Inicio.gd" id="1_0uyne"]
 [ext_resource type="PackedScene" uid="uid://t73h5m77xd8s" path="res://main.tscn" id="2_8ghba"]
 [ext_resource type="Texture2D" uid="uid://0necnmkdeb67" path="res://img/menu/Portada_Referencia.png" id="2_blodh"]
+[ext_resource type="Texture2D" uid="uid://bl0j68jw5kyxr" path="res://img/botones/Jugar-normal.png" id="4_n6wds"]
+[ext_resource type="Texture2D" uid="uid://ddoht32w7qewm" path="res://img/botones/Jugar-clicked.png" id="5_l5vwe"]
+[ext_resource type="Texture2D" uid="uid://bep0hnirnvlck" path="res://img/botones/Jugar-hover.png" id="6_b6lyi"]
+[ext_resource type="Texture2D" uid="uid://dmmo4fk4i8pku" path="res://img/botones/Creditos-normal.png" id="7_b5ttw"]
+[ext_resource type="Texture2D" uid="uid://b5a2mhqc8tits" path="res://img/botones/Creditos-clicked.png" id="8_27vhy"]
+[ext_resource type="Texture2D" uid="uid://crqb7d082gtv6" path="res://img/botones/Creditos-hover.png" id="9_v50ex"]
+[ext_resource type="Texture2D" uid="uid://dar27xn7ma2mq" path="res://img/botones/Salir-normal.png" id="10_nmnqp"]
+[ext_resource type="Texture2D" uid="uid://cjrraf8worknx" path="res://img/botones/Salir-clicked.png" id="11_ks2rd"]
+[ext_resource type="Texture2D" uid="uid://be6o46sdkv50v" path="res://img/botones/Salir-hover.png" id="12_an7dh"]
+[ext_resource type="Texture2D" uid="uid://cwhjy6iq6rens" path="res://img/botones/Ayuda-normal.png" id="13_flcg0"]
+[ext_resource type="Texture2D" uid="uid://c0xk4l0cxjk0f" path="res://img/botones/Ayuda-clicked.png" id="14_wihjo"]
+[ext_resource type="Texture2D" uid="uid://uqgbd5xuksq0" path="res://img/botones/Ayuda-gover.png" id="15_x2q2q"]
+[ext_resource type="Texture2D" uid="uid://cjdnujdpkw8rw" path="res://img/creditos/Creds-01.png" id="16_tipfq"]
+[ext_resource type="Texture2D" uid="uid://bjyaaqwse3y81" path="res://img/creditos/Creds-02.png" id="17_u7ck5"]
+[ext_resource type="Texture2D" uid="uid://c85slaornya81" path="res://img/creditos/Creds-03.png" id="18_ra68l"]
+[ext_resource type="Texture2D" uid="uid://4yp0q7qai6iv" path="res://img/creditos/Creds-04.png" id="19_skwhg"]
+[ext_resource type="Texture2D" uid="uid://bvx3lsc5lis03" path="res://img/creditos/Creds-05.png" id="20_uest4"]
+[ext_resource type="Texture2D" uid="uid://c3wx47rrhq2c2" path="res://img/tutorial/Instrucciones_1.png" id="21_y2373"]
+[ext_resource type="Texture2D" uid="uid://bmf07tgw21wn1" path="res://img/tutorial/Instrucciones_2.png" id="22_15rce"]
+[ext_resource type="Texture2D" uid="uid://bdatapjco1w4e" path="res://img/tutorial/Instrucciones_3.png" id="23_pjk3b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8naf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_tipfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_u7ck5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ra68l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_skwhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uest4")
+}],
+"loop": true,
+"name": &"creditos",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6j4pp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_y2373")
+}],
+"loop": true,
+"name": &"primer_paso",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_15rce")
+}],
+"loop": true,
+"name": &"segundo_paso",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_pjk3b")
+}],
+"loop": true,
+"name": &"tercer_paso",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_0uyne")
 main = ExtResource("2_8ghba")
 
 [node name="fondo_inicio" type="Sprite2D" parent="."]
+process_mode = 3
 texture = ExtResource("2_blodh")
 centered = false
+metadata/_edit_lock_ = true
 
-[node name="Play" type="Button" parent="."]
+[node name="Play" type="TextureButton" parent="."]
 process_mode = 3
-offset_left = 403.0
-offset_top = 411.0
-offset_right = 668.0
-offset_bottom = 509.0
-rotation = -0.453258
-theme_override_font_sizes/font_size = 65
-text = "PLAY"
+offset_left = 292.0
+offset_top = 140.0
+offset_right = 618.0
+offset_bottom = 370.0
+rotation = -0.000174493
+texture_normal = ExtResource("4_n6wds")
+texture_pressed = ExtResource("5_l5vwe")
+texture_hover = ExtResource("6_b6lyi")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Creditos" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 1214.0
+offset_top = 816.0
+offset_right = 1521.0
+offset_bottom = 1078.0
+texture_normal = ExtResource("7_b5ttw")
+texture_pressed = ExtResource("8_27vhy")
+texture_hover = ExtResource("9_v50ex")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Salir" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 1596.0
+offset_top = 784.0
+offset_right = 1912.0
+offset_bottom = 1031.0
+texture_normal = ExtResource("10_nmnqp")
+texture_pressed = ExtResource("11_ks2rd")
+texture_hover = ExtResource("12_an7dh")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Ayuda" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 827.0
+offset_top = 274.0
+offset_right = 1167.0
+offset_bottom = 510.0
+rotation = 0.0254942
+texture_normal = ExtResource("13_flcg0")
+texture_pressed = ExtResource("14_wihjo")
+texture_hover = ExtResource("15_x2q2q")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="pantalla_creditos" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -4)
+scale = Vector2(1.02831, 0.989917)
+sprite_frames = SubResource("SpriteFrames_s8naf")
+animation = &"creditos"
+frame_progress = 0.807521
+centered = false
+
+[node name="pantalla_ayuda" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(56, 12)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_6j4pp")
+animation = &"primer_paso"
+centered = false
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Ayuda" to="." method="_on_ayuda_pressed"]
