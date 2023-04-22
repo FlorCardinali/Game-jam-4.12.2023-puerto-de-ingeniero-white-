@@ -1,7 +1,9 @@
+Timer
+AudioStreamPlayer
+AudioStreamPlayer2D
 AnimatedSprite2D
 TextureButton
 Node
-Timer
 ColorRect
 Button
 Sprite2D

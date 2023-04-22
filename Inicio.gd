@@ -42,10 +42,12 @@ func _process(delta):
 			
 
 func _on_play_pressed():
+	$botones.play()
 	get_tree().change_scene_to_packed(main)
 
 
 func _on_creditos_pressed():
+	$botones.play()
 	$pantalla_creditos.visible = true
 	$pantalla_creditos.play()
 	
@@ -57,6 +59,7 @@ func _on_creditos_pressed():
 	en_creditos = true
 
 func _on_ayuda_pressed():
+	$botones.play()
 	$pantalla_ayuda.visible = true
 	
 	$Play.disabled =true
@@ -69,5 +72,9 @@ func _on_ayuda_pressed():
 
 
 func _on_salir_pressed():
+	$botones.play()
+	$botones/timer_salir.start()
+
+
+func _on_timer_salir_timeout():
 	get_tree().quit()
-	

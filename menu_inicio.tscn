@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://chy5jnwc84n0c"]
+[gd_scene load_steps=27 format=3 uid="uid://chy5jnwc84n0c"]
 
 [ext_resource type="Script" path="res://Inicio.gd" id="1_0uyne"]
 [ext_resource type="PackedScene" uid="uid://t73h5m77xd8s" path="res://main.tscn" id="2_8ghba"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c3wx47rrhq2c2" path="res://img/tutorial/Instrucciones_1.png" id="21_y2373"]
 [ext_resource type="Texture2D" uid="uid://bmf07tgw21wn1" path="res://img/tutorial/Instrucciones_2.png" id="22_15rce"]
 [ext_resource type="Texture2D" uid="uid://bdatapjco1w4e" path="res://img/tutorial/Instrucciones_3.png" id="23_pjk3b"]
+[ext_resource type="AudioStream" uid="uid://bfidktoqsb8l1" path="res://sounds/Start.wav" id="24_ak1fy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8naf"]
 animations = [{
@@ -141,7 +142,7 @@ position = Vector2(0, -4)
 scale = Vector2(1.02831, 0.989917)
 sprite_frames = SubResource("SpriteFrames_s8naf")
 animation = &"creditos"
-frame_progress = 0.807521
+frame_progress = 0.785767
 centered = false
 
 [node name="pantalla_ayuda" type="AnimatedSprite2D" parent="."]
@@ -153,7 +154,14 @@ sprite_frames = SubResource("SpriteFrames_6j4pp")
 animation = &"primer_paso"
 centered = false
 
+[node name="botones" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_ak1fy")
+
+[node name="timer_salir" type="Timer" parent="botones"]
+one_shot = true
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Ayuda" to="." method="_on_ayuda_pressed"]
+[connection signal="timeout" from="botones/timer_salir" to="." method="_on_timer_salir_timeout"]

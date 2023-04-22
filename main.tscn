@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://t73h5m77xd8s"]
+[gd_scene load_steps=19 format=3 uid="uid://t73h5m77xd8s"]
 
 [ext_resource type="PackedScene" uid="uid://df5udy5v4x5i7" path="res://fondo.tscn" id="1_ijuxq"]
 [ext_resource type="Script" path="res://main.gd" id="1_k82ms"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ba28i8lcufxgv" path="res://img/explosion/Boom3.png" id="8_xp7t1"]
 [ext_resource type="Texture2D" uid="uid://b83gjmb8okki3" path="res://img/explosion/Boom4.png" id="9_wjmj1"]
 [ext_resource type="Texture2D" uid="uid://dqryf8nvqb586" path="res://img/explosion/Boom5.png" id="10_rmdpu"]
+[ext_resource type="AudioStream" uid="uid://phtgnvmvg4rt" path="res://sounds/SongReady.mp3" id="14_0jjhl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xtu3i"]
 animations = [{
@@ -144,8 +145,15 @@ z_as_relative = false
 position = Vector2(121, 47)
 shape = SubResource("RectangleShape2D_okpje")
 
+[node name="musica_de_fondo" type="AudioStreamPlayer" parent="."]
+process_mode = 1
+stream = ExtResource("14_0jjhl")
+volume_db = -10.903
+mix_target = 1
+
 [connection signal="area_del_camion" from="control_camiones" to="control_cajas" method="_on_control_camiones_area_del_camion"]
 [connection signal="puntos" from="control_camiones" to="." method="_on_control_camiones_puntos"]
 [connection signal="aparece_barco" from="control_barco" to="control_cajas" method="_on_control_barco_aparece_barco"]
 [connection signal="caja_creada" from="control_cajas" to="control_barco" method="_on_control_cajas_caja_creada"]
 [connection signal="animation_finished" from="control_cajas/explocion" to="control_cajas" method="_on_explocion_animation_finished"]
+[connection signal="finished" from="musica_de_fondo" to="." method="_on_musica_de_fondo_finished"]
