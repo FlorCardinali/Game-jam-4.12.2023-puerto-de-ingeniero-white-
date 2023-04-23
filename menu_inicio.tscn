@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://chy5jnwc84n0c"]
+[gd_scene load_steps=32 format=3 uid="uid://chy5jnwc84n0c"]
 
 [ext_resource type="Script" path="res://Inicio.gd" id="1_0uyne"]
 [ext_resource type="PackedScene" uid="uid://t73h5m77xd8s" path="res://main.tscn" id="2_8ghba"]
@@ -27,6 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://bdt6t8koxrpxo" path="res://sounds/Ambienter listo_.wav" id="25_morit"]
 [ext_resource type="AudioStream" uid="uid://mcgorvlia1x" path="res://sounds/ObreroBien.wav" id="26_d5fyn"]
 [ext_resource type="AudioStream" uid="uid://djciu4bo67tfl" path="res://sounds/ObreromAL.wav" id="27_hdrt4"]
+[ext_resource type="AudioStream" uid="uid://d4jdsa0hqumd0" path="res://sounds/CreditsSong.wav" id="28_3mv0c"]
 [ext_resource type="AudioStream" uid="uid://k66xgii6t82j" path="res://sounds/Creditos.wav" id="28_hpem5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8naf"]
@@ -152,11 +153,24 @@ centered = false
 [node name="pantalla_ayuda" type="AnimatedSprite2D" parent="."]
 visible = false
 z_index = 2
-position = Vector2(56, 12)
-scale = Vector2(7, 7)
+position = Vector2(382, 179)
+scale = Vector2(4.42, 4.42)
 sprite_frames = SubResource("SpriteFrames_6j4pp")
 animation = &"primer_paso"
 centered = false
+
+[node name="ColorRect" type="ColorRect" parent="pantalla_ayuda"]
+z_as_relative = false
+anchors_preset = -1
+anchor_left = -0.327
+anchor_top = -0.28
+anchor_right = 1.342
+anchor_bottom = 1.36
+offset_left = 0.0200043
+offset_right = 0.0799866
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.54902)
 
 [node name="botones" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_ak1fy")
@@ -178,10 +192,10 @@ stream = ExtResource("27_hdrt4")
 volume_db = -15.935
 
 [node name="son_creditos" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("28_hpem5")
-volume_db = -14.258
+stream = ExtResource("28_3mv0c")
 
-[node name="Ttimer_sonido_creditos" type="Timer" parent="son_creditos"]
+[node name="tocar_creditos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_hpem5")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
@@ -189,4 +203,4 @@ volume_db = -14.258
 [connection signal="pressed" from="Ayuda" to="." method="_on_ayuda_pressed"]
 [connection signal="timeout" from="botones/timer_salir" to="." method="_on_timer_salir_timeout"]
 [connection signal="finished" from="musica_menu" to="." method="_on_musica_menu_finished"]
-[connection signal="timeout" from="son_creditos/Ttimer_sonido_creditos" to="." method="_on_ttimer_sonido_creditos_timeout"]
+[connection signal="finished" from="son_creditos" to="." method="_on_son_creditos_finished"]

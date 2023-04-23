@@ -10,6 +10,7 @@ func _ready():
 	en_ayuda = false
 	en_creditos = false
 	$pantalla_creditos.visible = false
+	$pantalla_ayuda.visible = false
 	$musica_menu.play()
 
 func _process(delta):
@@ -17,12 +18,13 @@ func _process(delta):
 		
 		if Input.is_action_just_pressed("click_izquierdo"):
 			en_creditos = false
-			$son_creditos/Ttimer_sonido_creditos.stop()
+			
 			$Play.disabled = false
 			$Ayuda.disabled = false
 			$Creditos.disabled =false
 			$Salir.disabled =false
 			
+			$son_creditos.stop()
 			$pantalla_creditos.visible = false
 			$pantalla_creditos.stop()
 	
@@ -54,10 +56,10 @@ func _on_play_pressed():
 
 
 func _on_creditos_pressed():
-	$botones.play()
-	$son_creditos/Ttimer_sonido_creditos.start()
+	$tocar_creditos.play()
 	$pantalla_creditos.visible = true
 	$pantalla_creditos.play()
+	$son_creditos.play()
 	
 	$Play.disabled =true
 	$Ayuda.disabled =true
@@ -92,7 +94,7 @@ func _on_musica_menu_finished():
 	$musica_menu.play()
 
 
-func _on_ttimer_sonido_creditos_timeout():
-	numero_random = rand.randi_range(1,3)
-	$son_creditos/Ttimer_sonido_creditos.wait_time = numero_random
-	$son_creditos.play()
+
+func _on_son_creditos_finished():
+	if en_creditos:
+		$son_creditos.play()

@@ -1,25 +1,25 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682154756
-barco.tscn::PackedScene::6466200454459773881::1682154756::0::1::::<><>::uid://dvqfgfc7uabaf<>uid://7n7by6wrs7pf
+::res://::1682263112
+barco.tscn::PackedScene::6466200454459773881::1682263112::0::1::::<><>::uid://dvqfgfc7uabaf<>uid://7n7by6wrs7pf
 caja.gd::GDScript::-1::1682058767::0::1::::<>CharacterBody2D<>::
-caja.tscn::PackedScene::4792258814295275014::1682154756::0::1::::<><>::res://caja.gd<>uid://iq3qdh6o7tx1
+caja.tscn::PackedScene::4792258814295275014::1682263112::0::1::::<><>::res://caja.gd<>uid://iq3qdh6o7tx1
 camion.gd::GDScript::-1::1681933581::0::1::::<>CharacterBody2D<>::
-camion.tscn::PackedScene::2715190263670033040::1682154756::0::1::::<><>::res://camion.gd<>uid://bbwp8gnd0aqai<>uid://bm4cs8qlblqde
+camion.tscn::PackedScene::2715190263670033040::1682263112::0::1::::<><>::res://camion.gd<>uid://bbwp8gnd0aqai<>uid://bm4cs8qlblqde
 control_barco.gd::GDScript::-1::1682145142::0::1::::<>Node<>::
 control_cajas.gd::GDScript::-1::1682144684::0::1::::<>Node<>::
 control_camiones.gd::GDScript::-1::1682146247::0::1::::<>Node<>::
-fondo.tscn::PackedScene::7573358607026674896::1681670681::0::1::::<><>::uid://buu0x3r5q4mbs
-Inicio.gd::GDScript::-1::1682154718::0::1::::<>Node2D<>::
-main.gd::GDScript::-1::1682153352::0::1::::<>Node<>::
-main.tscn::PackedScene::1401362289343085624::1682154756::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj<>uid://bexi10yhppw4w<>res://control_camiones.gd<>uid://bmh1v6r55c1v7<>res://control_barco.gd<>res://control_cajas.gd<>uid://cp72xnkqayo1b<>uid://ba28i8lcufxgv<>uid://b83gjmb8okki3<>uid://dqryf8nvqb586<>uid://phtgnvmvg4rt
-menu_inicio.tscn::PackedScene::5315546637803376064::1682154756::0::1::::<><>::res://Inicio.gd<>uid://t73h5m77xd8s<>uid://0necnmkdeb67<>uid://bl0j68jw5kyxr<>uid://ddoht32w7qewm<>uid://bep0hnirnvlck<>uid://dmmo4fk4i8pku<>uid://b5a2mhqc8tits<>uid://crqb7d082gtv6<>uid://dar27xn7ma2mq<>uid://cjrraf8worknx<>uid://be6o46sdkv50v<>uid://cwhjy6iq6rens<>uid://c0xk4l0cxjk0f<>uid://uqgbd5xuksq0<>uid://cjdnujdpkw8rw<>uid://bjyaaqwse3y81<>uid://c85slaornya81<>uid://4yp0q7qai6iv<>uid://bvx3lsc5lis03<>uid://c3wx47rrhq2c2<>uid://bmf07tgw21wn1<>uid://bdatapjco1w4e<>uid://bfidktoqsb8l1<>uid://dkg3xvlb46p6c<>uid://mcgorvlia1x<>uid://djciu4bo67tfl<>uid://k66xgii6t82j
-::res://img/::1682149042
+fondo.tscn::PackedScene::7573358607026674896::1682263112::0::1::::<><>::uid://cxx2l0jyh8csb<>uid://bubmaairw5nit<>uid://b2jxncpxkodpq<>uid://2hkv035u76lp
+Inicio.gd::GDScript::-1::1682260102::0::1::::<>Node2D<>::
+main.gd::GDScript::-1::1682262012::0::1::::<>Node<>::
+main.tscn::PackedScene::1401362289343085624::1682263112::0::1::::<><>::uid://df5udy5v4x5i7<>res://main.gd<>uid://bs6vqgeh5wsh5<>uid://cajn2jx851eg1<>uid://cyejm2shu20kj<>uid://vthq48k6seu1<>uid://bexi10yhppw4w<>uid://lbdipbq63xoh<>uid://dol3fu44qxbxh<>res://control_camiones.gd<>uid://oqwkl7mep5co<>uid://bmh1v6r55c1v7<>res://control_barco.gd<>uid://ox6hnrlp3152<>res://control_cajas.gd<>uid://cp72xnkqayo1b<>uid://ba28i8lcufxgv<>uid://b83gjmb8okki3<>uid://dqryf8nvqb586<>uid://phtgnvmvg4rt
+menu_inicio.tscn::PackedScene::5315546637803376064::1682263112::0::1::::<><>::res://Inicio.gd<>uid://t73h5m77xd8s<>uid://0necnmkdeb67<>uid://bl0j68jw5kyxr<>uid://ddoht32w7qewm<>uid://bep0hnirnvlck<>uid://dmmo4fk4i8pku<>uid://b5a2mhqc8tits<>uid://crqb7d082gtv6<>uid://dar27xn7ma2mq<>uid://cjrraf8worknx<>uid://be6o46sdkv50v<>uid://cwhjy6iq6rens<>uid://c0xk4l0cxjk0f<>uid://uqgbd5xuksq0<>uid://cjdnujdpkw8rw<>uid://bjyaaqwse3y81<>uid://c85slaornya81<>uid://4yp0q7qai6iv<>uid://bvx3lsc5lis03<>uid://c3wx47rrhq2c2<>uid://bmf07tgw21wn1<>uid://bdatapjco1w4e<>uid://bfidktoqsb8l1<>uid://bdt6t8koxrpxo<>uid://mcgorvlia1x<>uid://djciu4bo67tfl<>uid://d4jdsa0hqumd0<>uid://k66xgii6t82j
+::res://img/::1682262108
 Carga.png::CompressedTexture2D::596269611481323508::1681590057::1681590058::1::::<><>::
 Fondo1.png::CompressedTexture2D::3833045607914995404::1681590646::1681590649::1::::<><>::
 ::res://img/barco/::1682134706
 Cabina barco.png::CompressedTexture2D::8666572378457222345::1682134630::1682134706::1::::<><>::
 Coraza barco.png::CompressedTexture2D::2274825946254627491::1682134646::1682134706::1::::<><>::
-::res://img/botones/::1682147832
+::res://img/botones/::1682260481
 Ayuda-clicked.png::CompressedTexture2D::6575702721130227895::1682147646::1682147832::1::::<><>::
 Ayuda-gover.png::CompressedTexture2D::1437173209562446577::1682147633::1682147832::1::::<><>::
 Ayuda-normal.png::CompressedTexture2D::6332037525041304916::1682147623::1682147832::1::::<><>::
@@ -29,6 +29,9 @@ Creditos-normal.png::CompressedTexture2D::8027202813100809164::1682147661::16821
 Jugar-clicked.png::CompressedTexture2D::7399190332990295048::1682147783::1682147832::1::::<><>::
 Jugar-hover.png::CompressedTexture2D::2699672845885223058::1682147772::1682147832::1::::<><>::
 Jugar-normal.png::CompressedTexture2D::3210710968322787119::1682147757::1682147832::1::::<><>::
+Pausa-14.png::CompressedTexture2D::3715119530782453444::1682260469::1682260481::1::::<><>::
+Pausa-15.png::CompressedTexture2D::774338885266531919::1682260464::1682260481::1::::<><>::
+Pausa-16.png::CompressedTexture2D::1513644060029852754::1682260460::1682260481::1::::<><>::
 Reanudar-17.png::CompressedTexture2D::8166324118679645105::1682105954::1682107916::1::::<><>::
 Reanudar-18.png::CompressedTexture2D::1032019936195116143::1682105973::1682107917::1::::<><>::
 Reanudar-19.png::CompressedTexture2D::1017028114519108610::1682105988::1682107916::1::::<><>::
@@ -52,16 +55,36 @@ Boom4.png::CompressedTexture2D::4760836108307075044::1682105645::1682105779::1::
 Boom5.png::CompressedTexture2D::8318845862231369697::1682105645::1682105779::1::::<><>::
 ::res://img/menu/::1682135260
 Portada_Referencia.png::CompressedTexture2D::1781805143112189906::1682135257::1682135260::1::::<><>::
+::res://img/parallax/::1682263228
+Calle.png::CompressedTexture2D::4301518697138604618::1682262187::1682262229::1::::<><>::
+Mar (sin animar).png::CompressedTexture2D::4534490684457236342::1682262195::1682262229::1::::<><>::
+Nubes parallax (atardecer).png::CompressedTexture2D::3558309061691654101::1682262148::1682262153::1::::<><>::
+Nubes parallax (noche).png::CompressedTexture2D::5270732465660346698::1682262119::1682262153::1::::<><>::
+Nubes parallax.png::CompressedTexture2D::6436325790030068005::1682262113::1682262153::1::::<><>::
+Plataforma carga.png::CompressedTexture2D::1910195451834320897::1682262201::1682262229::1::::<><>::
+White y Bahia.png::CompressedTexture2D::3792990551282437447::1682262137::1682262153::1::::<><>::
+::res://img/parallax/mar/::1682263221
+Mar_animado1.png::CompressedTexture2D::4541974996698254719::1682263221::1682263231::1::::<><>::
+Mar_animado2.png::CompressedTexture2D::4382237813978413277::1682263221::1682263231::1::::<><>::
+Mar_animado3.png::CompressedTexture2D::5379021829959686635::1682263221::1682263231::1::::<><>::
+Mar_animado4.png::CompressedTexture2D::5915243365701365390::1682263221::1682263231::1::::<><>::
+Mar_animado5.png::CompressedTexture2D::8725519959886863828::1682263221::1682263231::1::::<><>::
+Mar_animado6.png::CompressedTexture2D::6514397036382245976::1682263221::1682263231::1::::<><>::
+Mar_animado7.png::CompressedTexture2D::8021066572194480958::1682263221::1682263231::1::::<><>::
+Mar_animado8.png::CompressedTexture2D::7812287108743248292::1682263221::1682263231::1::::<><>::
+Mar_animado9.png::CompressedTexture2D::4751645255996805344::1682263221::1682263231::1::::<><>::
+Mar_animado10.png::CompressedTexture2D::4150122094190811547::1682263221::1682263231::1::::<><>::
 ::res://img/tutorial/::1682147832
 Instrucciones_1.png::CompressedTexture2D::6784995286488591003::1682147529::1682147832::1::::<><>::
 Instrucciones_2.png::CompressedTexture2D::3240584774593094252::1682147535::1682147832::1::::<><>::
 Instrucciones_3.png::CompressedTexture2D::2598141639333880806::1682147542::1682147832::1::::<><>::
-::res://sounds/::1682155010
+::res://sounds/::1682259573
 Ambiente.wav::AudioStreamWAV::7875279023109886852::1682153769::1682153812::1::::<><>::
 Ambienter listo_.wav::AudioStreamWAV::2638128298180404240::1682155010::1682155013::1::::<><>::
 CajaBarco.wav::AudioStreamWAV::4014978831132690317::1682153776::1682153811::1::::<><>::
 CajaCamion.wav::AudioStreamWAV::502730906331196153::1682153780::1682153811::1::::<><>::
 Creditos.wav::AudioStreamWAV::767807774695981739::1682153128::1682153237::1::::<><>::
+CreditsSong.wav::AudioStreamWAV::9213532250597707631::1682259569::1682259573::1::::<><>::
 Explocion.wav::AudioStreamWAV::8273093633064620656::1682153719::1682153811::1::::<><>::
 ObreroBien.wav::AudioStreamWAV::24905444355415643::1682153790::1682153811::1::::<><>::
 ObreromAL.wav::AudioStreamWAV::7795613376550704625::1682153795::1682153811::1::::<><>::

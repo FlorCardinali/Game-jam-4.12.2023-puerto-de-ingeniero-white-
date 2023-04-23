@@ -1,10 +1,96 @@
-[gd_scene load_steps=2 format=3 uid="uid://df5udy5v4x5i7"]
+[gd_scene load_steps=16 format=3 uid="uid://df5udy5v4x5i7"]
 
-[ext_resource type="Texture2D" uid="uid://buu0x3r5q4mbs" path="res://img/Fondo1.png" id="1_l2p3d"]
+[ext_resource type="Texture2D" uid="uid://cxx2l0jyh8csb" path="res://img/parallax/Nubes parallax.png" id="1_b7o1i"]
+[ext_resource type="Texture2D" uid="uid://bubmaairw5nit" path="res://img/parallax/White y Bahia.png" id="2_3w6fp"]
+[ext_resource type="Texture2D" uid="uid://b2jxncpxkodpq" path="res://img/parallax/Calle.png" id="3_bbed2"]
+[ext_resource type="Texture2D" uid="uid://2hkv035u76lp" path="res://img/parallax/Plataforma carga.png" id="4_mt8kq"]
+[ext_resource type="Texture2D" uid="uid://b5yfwujvjpd1x" path="res://img/parallax/mar/Mar_animado1.png" id="5_e7w8h"]
+[ext_resource type="Texture2D" uid="uid://b3o1206ofs3lx" path="res://img/parallax/mar/Mar_animado2.png" id="6_2s673"]
+[ext_resource type="Texture2D" uid="uid://civvx6oo4co5x" path="res://img/parallax/mar/Mar_animado3.png" id="7_bwbie"]
+[ext_resource type="Texture2D" uid="uid://cqjngujgf47cs" path="res://img/parallax/mar/Mar_animado4.png" id="8_182cv"]
+[ext_resource type="Texture2D" uid="uid://dwkybk851co4s" path="res://img/parallax/mar/Mar_animado5.png" id="9_1vejc"]
+[ext_resource type="Texture2D" uid="uid://cy2vfxsot01uq" path="res://img/parallax/mar/Mar_animado6.png" id="10_73jau"]
+[ext_resource type="Texture2D" uid="uid://dmjp2arb3ug8e" path="res://img/parallax/mar/Mar_animado7.png" id="11_tf5gm"]
+[ext_resource type="Texture2D" uid="uid://djklhy0p54nls" path="res://img/parallax/mar/Mar_animado8.png" id="12_h2wld"]
+[ext_resource type="Texture2D" uid="uid://b8xy5ybdpecbg" path="res://img/parallax/mar/Mar_animado9.png" id="13_ofdcw"]
+[ext_resource type="Texture2D" uid="uid://b0el50wp6rgfb" path="res://img/parallax/mar/Mar_animado10.png" id="14_xexgg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6l8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_e7w8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2s673")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bwbie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_182cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1vejc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_73jau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tf5gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h2wld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ofdcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xexgg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="fondo" type="Node2D"]
 
-[node name="img_fondo" type="Sprite2D" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(50, 0)
+scroll_limit_end = Vector2(1800, 0)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(1442, 121)
+scale = Vector2(2, 2)
+texture = ExtResource("1_b7o1i")
+
+[node name="edificios" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
-texture = ExtResource("1_l2p3d")
+texture = ExtResource("2_3w6fp")
+centered = false
+
+[node name="calle" type="Sprite2D" parent="."]
+position = Vector2(0, 241)
+scale = Vector2(3, 3)
+texture = ExtResource("3_bbed2")
+centered = false
+
+[node name="plataformas" type="Sprite2D" parent="."]
+position = Vector2(854, 461)
+scale = Vector2(3, 3)
+texture = ExtResource("4_mt8kq")
+centered = false
+
+[node name="mar" type="AnimatedSprite2D" parent="."]
+z_index = 1
+z_as_relative = false
+position = Vector2(0, 868)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_m6l8p")
+autoplay = "default"
 centered = false
