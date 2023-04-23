@@ -1,33 +1,40 @@
-[gd_scene load_steps=29 format=3 uid="uid://t73h5m77xd8s"]
+[gd_scene load_steps=42 format=3 uid="uid://t73h5m77xd8s"]
 
 [ext_resource type="PackedScene" uid="uid://df5udy5v4x5i7" path="res://fondo.tscn" id="1_ijuxq"]
 [ext_resource type="Script" path="res://main.gd" id="1_k82ms"]
-[ext_resource type="Texture2D" uid="uid://bs6vqgeh5wsh5" path="res://img/botones/Pausa-14.png" id="2_q4vw2"]
+[ext_resource type="Texture2D" uid="uid://btaykqaw5pxkc" path="res://img/botones/Pausa-08.png" id="2_871u8"]
 [ext_resource type="PackedScene" uid="uid://cajn2jx851eg1" path="res://caja.tscn" id="2_w4d3y"]
 [ext_resource type="PackedScene" uid="uid://cyejm2shu20kj" path="res://barco.tscn" id="3_e6qwp"]
-[ext_resource type="Texture2D" uid="uid://vthq48k6seu1" path="res://img/botones/Pausa-16.png" id="3_gdilx"]
+[ext_resource type="Texture2D" uid="uid://dpkd4a3jj7p6e" path="res://img/botones/Pausa-10.png" id="3_yjk3l"]
 [ext_resource type="PackedScene" uid="uid://bexi10yhppw4w" path="res://camion.tscn" id="4_ji80p"]
-[ext_resource type="Texture2D" uid="uid://lbdipbq63xoh" path="res://img/botones/Pausa-15.png" id="4_rskud"]
-[ext_resource type="Texture2D" uid="uid://dol3fu44qxbxh" path="res://img/botones/Reanudar-17.png" id="5_dwwep"]
+[ext_resource type="Texture2D" uid="uid://cqno6de2vvhtw" path="res://img/botones/Pausa-09.png" id="4_jvtv2"]
+[ext_resource type="Texture2D" uid="uid://d2uyaxcvh1gh5" path="res://img/botones/Reintentar-15.png" id="5_5mmsj"]
+[ext_resource type="Texture2D" uid="uid://cw48q1unu6263" path="res://img/botones/Siguiente-12.png" id="5_bsjw0"]
 [ext_resource type="Script" path="res://control_camiones.gd" id="5_kjx4e"]
-[ext_resource type="Texture2D" uid="uid://oqwkl7mep5co" path="res://img/botones/Reanudar-19.png" id="6_3bkra"]
+[ext_resource type="Texture2D" uid="uid://vnqiytad71uc" path="res://img/botones/Ganaste.png" id="5_p6rsi"]
 [ext_resource type="Texture2D" uid="uid://bmh1v6r55c1v7" path="res://img/explosion/Boom1.png" id="6_4i52o"]
+[ext_resource type="Texture2D" uid="uid://dwhpj2e36ssnd" path="res://img/botones/Siguiente-13.png" id="6_luhbk"]
+[ext_resource type="Texture2D" uid="uid://d1o6q3g6aktxj" path="res://img/botones/Reintentar-17.png" id="6_uq451"]
 [ext_resource type="Script" path="res://control_barco.gd" id="6_y878k"]
-[ext_resource type="Texture2D" uid="uid://ox6hnrlp3152" path="res://img/botones/Reanudar-18.png" id="7_8jy3y"]
+[ext_resource type="Texture2D" uid="uid://d2tn35uunwkc8" path="res://img/botones/Reintentar-16.png" id="7_7aiay"]
 [ext_resource type="Script" path="res://control_cajas.gd" id="7_isrxx"]
+[ext_resource type="Texture2D" uid="uid://7d0xnt5gicpw" path="res://img/botones/Siguiente-14.png" id="7_tvqsv"]
 [ext_resource type="Texture2D" uid="uid://cp72xnkqayo1b" path="res://img/explosion/Boom2.png" id="7_y6awf"]
 [ext_resource type="Texture2D" uid="uid://ba28i8lcufxgv" path="res://img/explosion/Boom3.png" id="8_xp7t1"]
 [ext_resource type="Texture2D" uid="uid://b83gjmb8okki3" path="res://img/explosion/Boom4.png" id="9_wjmj1"]
 [ext_resource type="Texture2D" uid="uid://dqryf8nvqb586" path="res://img/explosion/Boom5.png" id="10_rmdpu"]
+[ext_resource type="Texture2D" uid="uid://lrhgqjwlayb2" path="res://img/botones/Ranudad-21.png" id="11_v021b"]
+[ext_resource type="Texture2D" uid="uid://chrx4aner4oy3" path="res://img/botones/Perdiste.png" id="12_jjmqm"]
+[ext_resource type="Texture2D" uid="uid://d18i0lbbou3ct" path="res://img/botones/Ranudad-23.png" id="12_ki71o"]
+[ext_resource type="Texture2D" uid="uid://bj56w5ne6npl8" path="res://img/botones/Ranudad-22.png" id="13_bh0gi"]
 [ext_resource type="AudioStream" uid="uid://phtgnvmvg4rt" path="res://sounds/SongReady.mp3" id="14_0jjhl"]
-
-[sub_resource type="FontVariation" id="FontVariation_ctgb6"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_xj0hm"]
-font = SubResource("FontVariation_ctgb6")
-font_size = 250
-outline_size = 50
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://d3cs8wlw6w5ps" path="res://img/botones/Cancelar-18.png" id="14_eidia"]
+[ext_resource type="Texture2D" uid="uid://035y1vnstidk" path="res://img/botones/Cancelar-20.png" id="15_k64sl"]
+[ext_resource type="Texture2D" uid="uid://cysv2c8hdch15" path="res://img/botones/Volver-26.png" id="16_mnmml"]
+[ext_resource type="Texture2D" uid="uid://s3nlsae1c707" path="res://img/botones/Cancelar-19.png" id="16_nv6f0"]
+[ext_resource type="Texture2D" uid="uid://bf0pitttxiy47" path="res://img/botones/Volver-28.png" id="17_ivqhf"]
+[ext_resource type="Texture2D" uid="uid://b4tjyupq2ycsk" path="res://img/botones/Volver-27 (1).png" id="18_fi38o"]
+[ext_resource type="AudioStream" uid="uid://c87n2h7f260fy" path="res://sounds/F.wav" id="35_pn4t7"]
 
 [sub_resource type="SystemFont" id="SystemFont_0yn6l"]
 
@@ -78,73 +85,130 @@ offset_left = 1765.0
 offset_top = 5.0
 offset_right = 1919.0
 offset_bottom = 147.0
-texture_normal = ExtResource("2_q4vw2")
-texture_pressed = ExtResource("3_gdilx")
-texture_hover = ExtResource("4_rskud")
+texture_normal = ExtResource("2_871u8")
+texture_pressed = ExtResource("3_yjk3l")
+texture_hover = ExtResource("4_jvtv2")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="texto_ganaste" type="Label" parent="."]
+[node name="texto_ganaste" type="Sprite2D" parent="."]
 visible = false
 z_index = 6
 z_as_relative = false
-offset_left = 301.0
-offset_top = 76.0
-offset_right = 1565.0
-offset_bottom = 421.0
-text = "GANASTE"
-label_settings = SubResource("LabelSettings_xj0hm")
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
+position = Vector2(362, 56)
+scale = Vector2(0.679856, 0.679856)
+texture = ExtResource("5_p6rsi")
+centered = false
 
 [node name="Ganaste" type="ColorRect" parent="texto_ganaste"]
 process_mode = 3
 modulate = Color(0, 0, 0, 0.67451)
 z_index = 5
 z_as_relative = false
-offset_left = -301.0
-offset_top = -76.0
-offset_right = 1620.0
-offset_bottom = 1005.0
+offset_left = -545.704
+offset_top = -111.788
+offset_right = 2348.3
+offset_bottom = 1589.21
 color = Color(0.0117647, 0.0431373, 0.0666667, 0.858824)
-metadata/_edit_lock_ = true
 
-[node name="boton_sig_nivel" type="Button" parent="texto_ganaste"]
-layout_mode = 1
+[node name="sig_nivel" type="TextureButton" parent="texto_ganaste"]
+offset_left = 618.0
+offset_top = 880.0
+offset_right = 1125.0
+offset_bottom = 1355.0
+texture_normal = ExtResource("5_bsjw0")
+texture_pressed = ExtResource("7_tvqsv")
+texture_hover = ExtResource("6_luhbk")
+stretch_mode = 4
+
+[node name="salir_boton_ganaste" type="TextureButton" parent="texto_ganaste"]
 anchors_preset = -1
-anchor_left = 0.344146
-anchor_top = 2.01449
-anchor_right = 0.689082
-anchor_bottom = 2.25507
-text = "siguiente nivel"
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.548
+anchor_top = 1.449
+anchor_right = 0.753
+anchor_bottom = 2.184
+offset_left = 195.542
+offset_top = -331.81
+offset_right = 300.807
+offset_bottom = -464.8
+texture_normal = ExtResource("14_eidia")
+texture_pressed = ExtResource("15_k64sl")
+texture_hover = ExtResource("16_nv6f0")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="texto_perdiste" type="Label" parent="."]
+[node name="volver_g" type="TextureButton" parent="texto_ganaste"]
+offset_left = 104.434
+offset_top = 885.482
+offset_right = 570.434
+offset_bottom = 1357.48
+texture_normal = ExtResource("16_mnmml")
+texture_pressed = ExtResource("17_ivqhf")
+texture_hover = ExtResource("18_fi38o")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="texto_perdiste" type="Sprite2D" parent="."]
 visible = false
 z_index = 6
 z_as_relative = false
-offset_left = 301.0
-offset_top = 76.0
-offset_right = 1565.0
-offset_bottom = 421.0
-text = "Perdiste"
-label_settings = SubResource("LabelSettings_xj0hm")
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
+position = Vector2(484, 131)
+scale = Vector2(0.616307, 0.616307)
+texture = ExtResource("12_jjmqm")
+centered = false
 
 [node name="Perdiste" type="ColorRect" parent="texto_perdiste"]
 process_mode = 3
 modulate = Color(0, 0, 0, 0.67451)
 z_index = 5
 z_as_relative = false
-offset_left = -301.0
-offset_top = -76.0
-offset_right = 1620.0
-offset_bottom = 1005.0
+offset_left = -815.0
+offset_top = -245.0
+offset_right = 2351.0
+offset_bottom = 1611.0
 color = Color(0.0117647, 0.0431373, 0.0666667, 0.858824)
-metadata/_edit_lock_ = true
+
+[node name="reintentar" type="TextureButton" parent="texto_perdiste"]
+anchors_preset = -1
+anchor_left = 0.386
+anchor_top = 1.145
+anchor_right = 0.596
+anchor_bottom = 1.5
+offset_left = -47.9795
+offset_top = -62.5176
+offset_right = 18.9505
+offset_bottom = 87.4124
+texture_normal = ExtResource("5_5mmsj")
+texture_pressed = ExtResource("6_uq451")
+texture_hover = ExtResource("7_7aiay")
+stretch_mode = 4
+
+[node name="salir_boton_perdiste" type="TextureButton" parent="texto_perdiste"]
+anchors_preset = -1
+anchor_left = 0.706
+anchor_top = 1.139
+anchor_right = 0.891
+anchor_bottom = 1.519
+offset_left = -45.9722
+offset_top = -55.8909
+offset_right = 60.6329
+offset_bottom = 83.1891
+texture_normal = ExtResource("14_eidia")
+texture_pressed = ExtResource("15_k64sl")
+texture_hover = ExtResource("16_nv6f0")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="volver_p" type="TextureButton" parent="texto_perdiste"]
+offset_left = 103.844
+offset_top = 889.167
+offset_right = 526.844
+offset_bottom = 1338.17
+texture_normal = ExtResource("16_mnmml")
+texture_pressed = ExtResource("17_ivqhf")
+texture_hover = ExtResource("18_fi38o")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="Pausa" type="Label" parent="."]
 visible = false
@@ -165,21 +229,51 @@ process_mode = 3
 modulate = Color(0, 0, 0, 0.67451)
 z_index = 5
 z_as_relative = false
+layout_mode = 0
 offset_left = -319.0
 offset_top = -263.0
 offset_right = 1616.0
-offset_bottom = 818.0
+offset_bottom = 837.0
 color = Color(0.0117647, 0.0431373, 0.0666667, 0.858824)
 
 [node name="reanudar" type="TextureButton" parent="Pausa"]
 layout_mode = 0
-offset_left = 403.0
-offset_top = 323.0
-offset_right = 879.0
-offset_bottom = 460.0
-texture_normal = ExtResource("5_dwwep")
-texture_pressed = ExtResource("6_3bkra")
-texture_hover = ExtResource("7_8jy3y")
+offset_left = 386.0
+offset_top = 298.0
+offset_right = 889.0
+offset_bottom = 554.0
+texture_normal = ExtResource("11_v021b")
+texture_pressed = ExtResource("12_ki71o")
+texture_hover = ExtResource("13_bh0gi")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="salir_boton" type="TextureButton" parent="Pausa"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.065
+anchor_top = 1.767
+anchor_right = 1.187
+anchor_bottom = 2.151
+offset_left = -0.160034
+offset_top = -4.61505
+offset_right = -0.368042
+offset_bottom = 28.905
+texture_normal = ExtResource("14_eidia")
+texture_pressed = ExtResource("15_k64sl")
+texture_hover = ExtResource("16_nv6f0")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="volver_perdiste" type="TextureButton" parent="Pausa"]
+layout_mode = 0
+offset_left = 1162.0
+offset_top = 604.0
+offset_right = 1319.0
+offset_bottom = 770.0
+texture_normal = ExtResource("16_mnmml")
+texture_pressed = ExtResource("17_ivqhf")
+texture_hover = ExtResource("18_fi38o")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -228,42 +322,42 @@ metadata/_edit_lock_ = true
 process_mode = 1
 z_index = 2
 z_as_relative = false
-position = Vector2(918, 578)
+position = Vector2(907, 601)
 collision_layer = 2
 collision_mask = 2
 
 [node name="colision_area_1" type="CollisionShape2D" parent="area_1"]
 z_index = 2
 z_as_relative = false
-position = Vector2(112, 45.9999)
+position = Vector2(124, 52)
 shape = SubResource("RectangleShape2D_vcqri")
 
 [node name="area_2" type="Area2D" parent="." groups=["area_dejable"]]
 process_mode = 1
 z_index = 2
 z_as_relative = false
-position = Vector2(1230, 576)
+position = Vector2(1223, 599)
 collision_layer = 2
 collision_mask = 2
 
 [node name="colision_area_2" type="CollisionShape2D" parent="area_2"]
 z_index = 2
 z_as_relative = false
-position = Vector2(121, 49)
+position = Vector2(128, 54)
 shape = SubResource("RectangleShape2D_2fsx5")
 
 [node name="area_3" type="Area2D" parent="." groups=["area_dejable"]]
 process_mode = 1
 z_index = 2
 z_as_relative = false
-position = Vector2(1548, 577)
+position = Vector2(1542, 604)
 collision_layer = 2
 collision_mask = 2
 
 [node name="colision_area_3" type="CollisionShape2D" parent="area_3"]
 z_index = 2
 z_as_relative = false
-position = Vector2(121, 47)
+position = Vector2(125, 49)
 shape = SubResource("RectangleShape2D_okpje")
 
 [node name="musica_de_fondo" type="AudioStreamPlayer" parent="."]
@@ -272,9 +366,24 @@ stream = ExtResource("14_0jjhl")
 volume_db = -10.903
 mix_target = 1
 
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="perdiste" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("35_pn4t7")
+
 [connection signal="pressed" from="boton_pausa" to="." method="_on_boton_pausa_pressed"]
-[connection signal="pressed" from="texto_ganaste/boton_sig_nivel" to="." method="_on_boton_sig_nivel_pressed"]
+[connection signal="pressed" from="texto_ganaste/sig_nivel" to="." method="_on_sig_nivel_pressed"]
+[connection signal="pressed" from="texto_ganaste/salir_boton_ganaste" to="." method="_on_salir_boton_pressed"]
+[connection signal="pressed" from="texto_ganaste/volver_g" to="." method="_on_volver_perdiste_pressed"]
+[connection signal="pressed" from="texto_perdiste/reintentar" to="." method="_on_reintentar_pressed"]
+[connection signal="pressed" from="texto_perdiste/salir_boton_perdiste" to="." method="_on_salir_boton_pressed"]
+[connection signal="pressed" from="texto_perdiste/volver_p" to="." method="_on_volver_perdiste_pressed"]
 [connection signal="pressed" from="Pausa/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="Pausa/salir_boton" to="." method="_on_salir_boton_pressed"]
+[connection signal="pressed" from="Pausa/volver_perdiste" to="." method="_on_volver_perdiste_pressed"]
 [connection signal="area_del_camion" from="control_camiones" to="control_cajas" method="_on_control_camiones_area_del_camion"]
 [connection signal="puntos" from="control_camiones" to="." method="_on_control_camiones_puntos"]
 [connection signal="aparece_barco" from="control_barco" to="control_cajas" method="_on_control_barco_aparece_barco"]

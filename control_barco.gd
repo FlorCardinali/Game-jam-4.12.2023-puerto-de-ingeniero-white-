@@ -6,14 +6,14 @@ var barco_instancia
 var hay_barco = false
 signal aparece_barco(barco)
 var colision_barco
-var vector_barco = Vector2(10,0)
+var vector_barco = Vector2(18,0)
 var caja_barco
 
 func _process(delta):
 	if not hay_barco:
 		barco_instancia = barco.instantiate()
 		add_child(barco_instancia)
-		barco_instancia.position = Vector2(-800,650)
+		barco_instancia.position = Vector2(-800,800)
 		emit_signal("aparece_barco", barco_instancia)
 		hay_barco = true
 

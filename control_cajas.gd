@@ -20,7 +20,7 @@ func _on_control_barco_aparece_barco(barco):
 	barquito = barco
 	caja_instancia = caja.instantiate()
 	add_child(caja_instancia)
-	caja_instancia.position = Vector2(-450,780)
+	caja_instancia.position = Vector2(-450,880)
 	caja_instancia.connect("se_solto_la_caja", cuando_se_suelta_la_caja)
 	emit_signal("caja_creada",caja_instancia)
 

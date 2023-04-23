@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://chy5jnwc84n0c"]
+[gd_scene load_steps=33 format=3 uid="uid://chy5jnwc84n0c"]
 
 [ext_resource type="Script" path="res://Inicio.gd" id="1_0uyne"]
 [ext_resource type="PackedScene" uid="uid://t73h5m77xd8s" path="res://main.tscn" id="2_8ghba"]
@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://djciu4bo67tfl" path="res://sounds/ObreromAL.wav" id="27_hdrt4"]
 [ext_resource type="AudioStream" uid="uid://d4jdsa0hqumd0" path="res://sounds/CreditsSong.wav" id="28_3mv0c"]
 [ext_resource type="AudioStream" uid="uid://k66xgii6t82j" path="res://sounds/Creditos.wav" id="28_hpem5"]
+[ext_resource type="Texture2D" uid="uid://chhmwcso6h06j" path="res://img/menu/Logo_3.png" id="30_ovksi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8naf"]
 animations = [{
@@ -90,6 +91,13 @@ process_mode = 3
 texture = ExtResource("2_blodh")
 centered = false
 metadata/_edit_lock_ = true
+
+[node name="logo" type="Sprite2D" parent="."]
+z_as_relative = false
+position = Vector2(711, 582)
+rotation = -0.106465
+scale = Vector2(0.751101, 0.751101)
+texture = ExtResource("30_ovksi")
 
 [node name="Play" type="TextureButton" parent="."]
 process_mode = 3
@@ -181,7 +189,6 @@ one_shot = true
 
 [node name="musica_menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_morit")
-volume_db = -20.129
 
 [node name="obrero" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_d5fyn")

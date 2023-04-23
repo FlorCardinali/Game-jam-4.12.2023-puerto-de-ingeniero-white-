@@ -5,7 +5,7 @@ extends Node
 var hay_camion = false #lo que controla que haya un solo camion
 var camion_instancia #donde se guarda la copia del camion
 var area_camioncito
-var vector_camion = Vector2(-5,0) #velocidad a la que va el camion
+var vector_camion = Vector2(-10,0) #velocidad a la que va el camion
 signal area_del_camion(area)
 signal puntos(punto)
 

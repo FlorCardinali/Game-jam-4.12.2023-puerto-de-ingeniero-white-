@@ -65,31 +65,31 @@ motion_mirroring = Vector2(1800, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_repeat = 2
-position = Vector2(1442, 121)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 texture = ExtResource("1_b7o1i")
+centered = false
 
 [node name="edificios" type="Sprite2D" parent="."]
+position = Vector2(-6, 41)
 scale = Vector2(3, 3)
 texture = ExtResource("2_3w6fp")
 centered = false
 
 [node name="calle" type="Sprite2D" parent="."]
-position = Vector2(0, 241)
+position = Vector2(0, 280)
 scale = Vector2(3, 3)
 texture = ExtResource("3_bbed2")
 centered = false
 
 [node name="plataformas" type="Sprite2D" parent="."]
-position = Vector2(854, 461)
+position = Vector2(830, 545)
 scale = Vector2(3, 3)
 texture = ExtResource("4_mt8kq")
 centered = false
 
 [node name="mar" type="AnimatedSprite2D" parent="."]
-z_index = 1
 z_as_relative = false
-position = Vector2(0, 868)
+position = Vector2(0, 916)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_m6l8p")
 autoplay = "default"
